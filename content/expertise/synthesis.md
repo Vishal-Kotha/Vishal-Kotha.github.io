@@ -66,14 +66,15 @@ For aqueous Zn-ion batteries, we required an anode with high surface area and st
 ---
 
 ### 📜 Source & Citation
-<div style="background-color: #f9f9f9; padding: 20px; border-left: 5px solid #d4af37; font-size: 0.9rem; margin-top: 20px;">
+
+<div class="citation-block">
     <p><strong>Note:</strong> The methodology described above is adapted from the author's doctoral research. To use this data in your work, please cite the original thesis:</p>
-    <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px;">
-        Kotha, V. (2022). <em>Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes...</em> [Doctoral dissertation, IIT Bombay].
-    </p>
-    <p style="margin-top: 10px;">
+    <span class="citation-text">
+        Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].
+    </span>
+    <div style="margin-top: 15px;">
         <button class="btn-cite" onclick="window.copyCitation('Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].')">
             Copy Citation
         </button>
-    </p>
+    </div>
 </div>

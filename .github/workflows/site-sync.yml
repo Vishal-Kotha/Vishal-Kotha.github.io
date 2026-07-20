@@ -1,0 +1,65 @@
+name: Sync metrics & deploy to Netlify
+
+on:
+  schedule:
+    - cron: "0 3 * * 1" # Every Monday 03:00 UTC — refresh citation metrics
+  push:
+    branches: ["main"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "site-sync"
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      # ---- Metrics refresh (scheduled + manual runs only) ----
+      - name: Setup Python
+        if: github.event_name != 'push'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update citation metrics
+        if: github.event_name != 'push'
+        continue-on-error: true # stale metrics must never block a deploy
+        run: |
+          pip install scholarly
+          python scripts/update_metrics.py
+
+      - name: Commit refreshed metrics
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "metrics-bot"
+          git config user.email "actions@github.com"
+          git add data/scholar_metrics.json
+          git diff --cached --quiet || git commit -m "chore: refresh citation metrics [skip ci]"
+          git push
+
+      # ---- Build ----
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.140.2"
+          extended: true
+
+      - name: Build site
+        run: hugo --minify
+
+      # ---- Deploy prebuilt files (consumes NO Netlify build minutes) ----
+      - name: Deploy to Netlify
+        run: npx netlify-cli@17 deploy --prod --dir=public --message "CI deploy ${{ github.sha }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

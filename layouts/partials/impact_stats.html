@@ -1,0 +1,37 @@
+{{ if .Site.Data.scholar_metrics }}
+<div class="impact-container" style="display: flex; gap: 20px; margin: 30px 0; background: #f9f9f9; padding: 20px; border-left: 5px solid #d4af37; border-radius: 4px;">
+    
+    <div class="impact-item" style="flex: 1; text-align: center;">
+        <span style="display: block; font-size: 2.5rem; font-weight: bold; color: #0a192f;">
+            {{ .Site.Data.scholar_metrics.citations }}
+        </span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">
+            Citations
+        </span>
+    </div>
+
+    <div class="impact-item" style="flex: 1; text-align: center; border-left: 1px solid #ddd;">
+        <span style="display: block; font-size: 2.5rem; font-weight: bold; color: #0a192f;">
+            {{ .Site.Data.scholar_metrics.h_index }}
+        </span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">
+            h-index
+        </span>
+    </div>
+
+    <div class="impact-item" style="flex: 1; text-align: center; border-left: 1px solid #ddd;">
+        <span style="display: block; font-size: 2.5rem; font-weight: bold; color: #0a192f;">
+            {{ .Site.Data.scholar_metrics.i10_index }}
+        </span>
+        <span style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">
+            i10-index
+        </span>
+    </div>
+
+</div>
+<p style="text-align: right; font-size: 0.8rem; color: #888; margin-top: -10px;">
+    <em>Data sourced live from Google Scholar via Python automation.</em>
+</p>
+{{ else }}
+<p>Loading research impact metrics...</p>
+{{ end }}

@@ -84,9 +84,11 @@
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/about/</guid>
       <description>&lt;img src=&#34;//localhost:1313/images/vishal-profile.jpg&#34; class=&#34;profile-circle&#34; alt=&#34;Dr. Vishal Kotha&#34;&gt;
-&lt;p&gt;I am a &lt;strong&gt;Materials Scientist&lt;/strong&gt; and &lt;strong&gt;Data Engineer&lt;/strong&gt; dedicated to bridging the gap between atomic-level design and real-world energy applications. With a Ph.D. from &lt;strong&gt;IIT Bombay&lt;/strong&gt; and postdoctoral experience at the &lt;strong&gt;Weizmann Institute of Science&lt;/strong&gt;, I specialize in synthesizing transition metal perovskite oxides for green hydrogen and next-gen batteries.&lt;/p&gt;
-&lt;h3 id=&#34;my-philosophy-conscious-science&#34;&gt;My Philosophy: &amp;ldquo;Conscious Science&amp;rdquo;&lt;/h3&gt;
-&lt;p&gt;My approach to research is grounded in the belief that &lt;strong&gt;precision in the laboratory begins with precision of the mind.&lt;/strong&gt;&lt;/p&gt;</description>
+&lt;p&gt;I am a &lt;strong&gt;Materials Scientist&lt;/strong&gt; and &lt;strong&gt;Operational Strategist&lt;/strong&gt; with over 7 years of experience in bridging atomic-level design with industrial-scale energy solutions.&lt;/p&gt;
+&lt;p&gt;With a Ph.D. from &lt;strong&gt;IIT Bombay&lt;/strong&gt; and postdoctoral tenure at the &lt;strong&gt;Weizmann Institute of Science&lt;/strong&gt;, I specialize in synthesizing transition metal perovskite oxides for &lt;strong&gt;Green Hydrogen&lt;/strong&gt; and &lt;strong&gt;Next-Gen Batteries&lt;/strong&gt;. My technical work is defined by a focus on &lt;strong&gt;scalability&lt;/strong&gt;, &lt;strong&gt;cost-optimization&lt;/strong&gt;, and &lt;strong&gt;process safety&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;leadership-philosophy-conscious-engineering&#34;&gt;Leadership Philosophy: &amp;ldquo;Conscious Engineering&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;My approach to R&amp;amp;D is grounded in the belief that &lt;strong&gt;precision in the laboratory begins with precision of the mind.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Let&#39;s Collaborate</title>
@@ -119,66 +121,82 @@
 &lt;/div&gt;</description>
     </item>
     <item>
-      <title>Life in Science</title>
+      <title>Outreach &amp; Professional Service</title>
       <link>//localhost:1313/gallery/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/gallery/</guid>
       <description>&lt;p&gt;Science is not just about data; it is about people, teaching, and exploration.&lt;/p&gt;
-&lt;div class=&#34;project-grid&#34;&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/talk-kuu.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover; object-position: top;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Invited Speaker&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Delivering a lecture on &#34;Future Materials&#34; to PG students at Khallikote Unitary University (KUU).&lt;/span&gt;
+&lt;div class=&#34;gallery-grid&#34;&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/talk-kuu.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Lecture at KUU&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Invited Speaker&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Delivering a lecture on &#34;Future Materials&#34; to PG students at Khallikote Unitary University.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/chem-magic.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Science Communication&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Demonstrating &#34;Chemistry Magic&#34; to the public at IIT Bombay Techfest.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/chem-magic.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Techfest Demo&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Science Communication&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Demonstrating &#34;Chemistry Magic&#34; to the public at IIT Bombay Techfest.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/conf-organizer.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Conference Organization&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Organizing committee member for the APCTCC-8 Conference at IIT Bombay.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/conf-organizer.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Conference Team&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Conference Organization&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Organizing committee member for the APCTCC-8 Conference at IIT Bombay.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/student-mentorship.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Mentorship&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Guiding a Master&#39;s student during their poster presentation.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/student-mentorship.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Poster Session&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Mentorship&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Guiding a Master&#39;s student during their poster presentation.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/installing-sem.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Technical Leadership&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Leading the installation of a ZEISS SEM system.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/installing-sem.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;SEM Installation&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Technical Leadership&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Leading the installation of a ZEISS SEM system.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/wis-entry.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Global Research&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Beginning my Postdoctoral journey at Weizmann Institute, Israel.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/wis-entry.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Weizmann Institute&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Global Research&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Beginning my Postdoctoral journey at Weizmann Institute, Israel.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/phd-convocation.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover; object-position: top;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Doctoral Convocation&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Receiving Ph.D. degree from Prof. M. Ravikanth (HOD Chemistry, IITB).&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/phd-convocation.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;PhD Convocation&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Doctoral Convocation&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Receiving Ph.D. degree from Prof. M. Ravikanth (HOD Chemistry, IITB).&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
-    &lt;article class=&#34;project-card&#34; style=&#34;padding: 0; border: none;&#34;&gt;
-        &lt;img src=&#34;//localhost:1313/images/msc-dept.jpg&#34; style=&#34;width: 100%; height: 250px; object-fit: cover;&#34;&gt;
-        &lt;div style=&#34;padding: 15px; text-align: center;&#34;&gt;
-            &lt;strong&gt;Roots&lt;/strong&gt;&lt;br&gt;
-            &lt;span style=&#34;color: #666; font-size: 0.9rem;&#34;&gt;Department of Chemistry, Pondicherry University.&lt;/span&gt;
+    &lt;article class=&#34;gallery-card&#34;&gt;
+        &lt;div class=&#34;gallery-img-container&#34;&gt;
+            &lt;img src=&#34;//localhost:1313/images/msc-dept.jpg&#34; class=&#34;gallery-img&#34; alt=&#34;Pondicherry University&#34;&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;gallery-content&#34;&gt;
+            &lt;span class=&#34;gallery-role&#34;&gt;Roots&lt;/span&gt;
+            &lt;span class=&#34;gallery-desc&#34;&gt;Department of Chemistry, Pondicherry University.&lt;/span&gt;
         &lt;/div&gt;
     &lt;/article&gt;
 &lt;/div&gt;</description>
@@ -188,23 +206,24 @@
       <link>//localhost:1313/experience/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/experience/</guid>
-      <description>&lt;p&gt;A timeline of my scientific research, leadership roles, and personal development.&lt;/p&gt;
+      <description>&lt;p&gt;A timeline of engineering leadership, scalable research, and operational excellence.&lt;/p&gt;
 &lt;div class=&#34;timeline&#34;&gt;
     &lt;div class=&#34;timeline-item&#34;&gt;
         &lt;div class=&#34;timeline-marker&#34;&gt;&lt;/div&gt;
         &lt;div class=&#34;timeline-content&#34;&gt;
             &lt;span class=&#34;date&#34;&gt;Feb 2024 - Present&lt;/span&gt;
-            &lt;h3&gt;Volunteer &amp; Educator&lt;/h3&gt;
+            &lt;h3&gt;Strategic Sabbatical: Leadership &amp; Operations&lt;/h3&gt;
             &lt;div class=&#34;institution-header&#34;&gt;
                 &lt;a href=&#34;https://isha.sadhguru.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; class=&#34;institution-link&#34;&gt;
                     &lt;img src=&#34;//localhost:1313/images/logo-isha.png&#34; alt=&#34;Isha Foundation&#34; class=&#34;timeline-logo&#34;&gt;
                     &lt;h4&gt;Isha Foundation | Tamil Nadu, India&lt;/h4&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
-            &lt;p&gt;&lt;strong&gt;Focus: Leadership, Resilience &amp; Pedagogy&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Focus: Operational Resilience &amp; Crisis Management&lt;/strong&gt;&lt;/p&gt;
             &lt;ul&gt;
-                &lt;li&gt;Engaged in a rigorous residential program to enhance mental clarity and operational precision.&lt;/li&gt;
-                &lt;li&gt;Taught Chemistry and Vedic Mathematics to 30+ students, refining cross-cultural communication skills.&lt;/li&gt;
+                &lt;li&gt;Undertook a rigorous residential program to enhance &lt;strong&gt;decision-making under pressure&lt;/strong&gt; and mental clarity[cite: 323].&lt;/li&gt;
+                &lt;li&gt;Managed cross-functional volunteer teams, optimizing workflows in a dynamic, high-volume environment.&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Skill Transfer:&lt;/strong&gt; Translating &#34;inner engineering&#34; discipline into &#34;process engineering&#34; reliability.&lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -212,14 +231,14 @@
         &lt;div class=&#34;timeline-marker&#34;&gt;&lt;/div&gt;
         &lt;div class=&#34;timeline-content&#34;&gt;
             &lt;span class=&#34;date&#34;&gt;Apr 2023 - Jan 2024&lt;/span&gt;
-            &lt;h3&gt;Postdoctoral Fellow&lt;/h3&gt;
+            &lt;h3&gt;Postdoctoral Scientist&lt;/h3&gt;
             &lt;div class=&#34;institution-header&#34;&gt;
                 &lt;a href=&#34;https://www.weizmann.ac.il/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34; class=&#34;institution-link&#34;&gt;
                     &lt;img src=&#34;//localhost:1313/images/logo-weizmann.png&#34; alt=&#34;Weizmann Institute&#34; class=&#34;timeline-logo&#34;&gt;
                     &lt;h4&gt;Weizmann Institute of Science | Israel&lt;/h4&gt;
                 &lt;/a&gt;
             &lt;/div&gt;
-            &lt;p&gt;&lt;strong&gt;Focus: Green Hydrogen &amp; Chiral Spintronics&lt;/strong&gt;&lt;/p&gt;</description>
+            &lt;p&gt;&lt;strong&gt;Focus: Green Hydrogen &amp; Electrocatalysis Efficiency&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Technical Capabilities</title>
@@ -317,6 +336,29 @@ weight: 1&lt;/h2&gt;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/publications/</guid>
       <description>&lt;p&gt;A selected list of peer-reviewed articles focusing on &lt;strong&gt;Perovskites&lt;/strong&gt;, &lt;strong&gt;Green Hydrogen&lt;/strong&gt;, and &lt;strong&gt;Energy Storage&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;metrics-summary&#34; style=&#34;
+    font-family: &#39;Roboto&#39;, sans-serif; 
+    font-size: 0.95rem; 
+    color: #555; 
+    background: #f9f9f9; 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    border-left: 3px solid #0a192f;
+&#34;&gt;
+    &lt;strong&gt;Cumulative Impact:&lt;/strong&gt; 
+    
+        &lt;strong&gt;11&lt;/strong&gt; Peer-Reviewed Articles 
+        &amp;nbsp;|&amp;nbsp; 
+        &lt;strong&gt;143&lt;/strong&gt; Citations 
+        &amp;nbsp;|&amp;nbsp; 
+        h-index: &lt;strong&gt;7&lt;/strong&gt;
+    
+    
+    &lt;span style=&#34;font-size: 0.8rem; color: #888; float: right; margin-top: 2px;&#34;&gt;
+        (Source: Google Scholar)
+    &lt;/span&gt;
+&lt;/div&gt;
 &lt;div style=&#34;max-width: 900px; margin: 0 auto;&#34;&gt;
     &lt;h2 style=&#34;border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 50px;&#34;&gt;2024&lt;/h2&gt;
     &lt;div class=&#34;pub-card&#34;&gt;

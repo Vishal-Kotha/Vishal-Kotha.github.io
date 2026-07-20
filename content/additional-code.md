@@ -136,3 +136,18 @@ Moving beyond static DC measurements, I employed frequency-dependent and time-re
 
 ---
 
+<p>Bridging atomic precision with conscious leadership for real-world energy solutions.</p>
+---
+<div style="max-width: 900px; margin: 50px auto; text-align: center;">
+    <h2 style="color: #0a192f; margin-bottom: 20px;">The Advanced Materials Vision</h2>
+    <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        My research operates at the intersection of <strong>Condensed Matter Physics</strong> and <strong>Materials Chemistry</strong>. 
+        By manipulating electrons and spins within layered oxides and heterostructures, I aim to pioneer the next wave of 
+        <strong>Green Hydrogen Electrolyzers</strong> and <strong>Neuromorphic Computing Materials</strong>.
+    </p>
+    <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+        From <strong>ab-initio design</strong> to <strong>nanodevice fabrication</strong>, I bridge the gap between fundamental atomic mechanisms and scalable real-world energy solutions.
+    </p>
+</div>
+
+---

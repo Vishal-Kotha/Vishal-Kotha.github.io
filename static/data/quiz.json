@@ -1,0 +1,107 @@
+[
+  {
+    "q": "What is the general chemical formula of a perovskite?",
+    "options": ["ABX₃", "AB₂X₄", "A₂BX₆", "ABX₂"],
+    "answer": 0,
+    "difficulty": "easy",
+    "explain": "Perovskites follow ABX₃: a large A-site cation, a smaller B-site cation inside an octahedron of X anions (usually oxygen or a halide). This simple formula hides enormous chemical flexibility."
+  },
+  {
+    "q": "The Goldschmidt tolerance factor t ≈ 1 indicates what about a perovskite?",
+    "options": ["An ideal cubic structure is likely stable", "The material must be ferroelectric", "The lattice will collapse", "The B-site must be vacant"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "t = (r_A + r_X) / √2(r_B + r_X). Near t = 1, the ions pack into the ideal cubic perovskite. Between ~0.8–1.0 distorted variants form — and those distortions are themselves a powerful design tool."
+  },
+  {
+    "q": "During discharge of a zinc–air battery, which reaction occurs at the air cathode?",
+    "options": ["Oxygen reduction reaction (ORR)", "Oxygen evolution reaction (OER)", "Hydrogen evolution reaction (HER)", "Zinc dissolution"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "On discharge, atmospheric O₂ is reduced at the air cathode (ORR) while zinc oxidizes at the anode. On charge the cathode reverses to OER — which is why bifunctional catalysts like doped perovskites are so valuable."
+  },
+  {
+    "q": "What makes hydrogen 'green'?",
+    "options": ["It is produced by water electrolysis powered by renewable electricity", "It is stored in green pressurized cylinders", "It comes from natural gas with carbon capture", "It is mixed with biogas"],
+    "answer": 0,
+    "difficulty": "easy",
+    "explain": "Colour labels track the production route: green = renewable-powered electrolysis, grey = steam methane reforming without capture, blue = fossil-based with carbon capture. Only green hydrogen is near-zero carbon at source."
+  },
+  {
+    "q": "The minimum thermodynamic voltage required to split water into H₂ and O₂ is:",
+    "options": ["1.23 V", "0.59 V", "2.06 V", "3.00 V"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "ΔG = 237 kJ/mol for water splitting gives E = ΔG/nF = 1.23 V at 25 °C. Real electrolyzers need more — the extra voltage is the 'overpotential', and reducing it is the central mission of electrocatalysis."
+  },
+  {
+    "q": "In electrochemistry, 'overpotential' refers to:",
+    "options": ["Extra voltage beyond the thermodynamic value needed to drive a reaction at a useful rate", "The maximum voltage a battery can deliver", "Voltage lost to wiring resistance only", "The open-circuit voltage of a cell"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "Kinetics charge a toll: sluggish electron transfer and gas evolution demand voltage beyond the thermodynamic 1.23 V (for water splitting). A great catalyst is one that shrinks this toll."
+  },
+  {
+    "q": "The CISS effect — central to chiral electrocatalysis — stands for:",
+    "options": ["Chiral-Induced Spin Selectivity", "Charge-Induced Surface Splitting", "Catalytic Ion Site Substitution", "Chemically Induced Spontaneous Symmetry"],
+    "answer": 0,
+    "difficulty": "hard",
+    "explain": "Chiral molecules and surfaces preferentially transmit electrons of one spin orientation. In water splitting, spin-polarized electrons favour the desired O₂ (triplet) pathway — boosting efficiency and suppressing side products like H₂O₂."
+  },
+  {
+    "q": "X-ray diffraction (XRD) identifies crystal structures using which law?",
+    "options": ["Bragg's law: nλ = 2d·sinθ", "Beer–Lambert law", "Fick's law", "Ohm's law"],
+    "answer": 0,
+    "difficulty": "easy",
+    "explain": "X-rays reflecting off parallel atomic planes interfere constructively when nλ = 2d·sinθ. The resulting peak pattern is a fingerprint of the lattice — the first thing a materials scientist checks after synthesis."
+  },
+  {
+    "q": "Oxygen vacancies in perovskite oxides typically:",
+    "options": ["Can enhance catalytic activity and ionic conductivity", "Always destroy the material", "Have no effect on properties", "Only change the colour"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "Vacancies alter the B-site oxidation state and create active surface sites for oxygen chemistry. Deliberate defect engineering — imperfection by design — is how modern perovskite catalysts are tuned."
+  },
+  {
+    "q": "Which of these is NOT a perovskite?",
+    "options": ["Rutile TiO₂", "SrTiO₃", "BaTiO₃", "LaMnO₃"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "Rutile TiO₂ has formula AX₂ with a different octahedral network. SrTiO₃, BaTiO₃, and LaMnO₃ are all classic ABO₃ perovskites — spanning dielectrics, ferroelectrics, and magnetism in one structural family."
+  },
+  {
+    "q": "The key difference between SEM and TEM microscopy is:",
+    "options": ["TEM transmits electrons through an ultra-thin sample, achieving far higher resolution", "SEM uses light instead of electrons", "TEM only works on liquids", "SEM requires no vacuum"],
+    "answer": 0,
+    "difficulty": "easy",
+    "explain": "SEM scans a surface with a focused beam (topography, ~nm resolution); TEM shoots electrons through a sample thinned to <100 nm, resolving atomic columns. Choosing between them is choosing between skin and skeleton."
+  },
+  {
+    "q": "In ABO₃ perovskite electrocatalysts, which site usually governs catalytic activity?",
+    "options": ["The B-site transition metal", "The A-site alkaline earth", "The oxygen alone", "Neither — activity is random"],
+    "answer": 0,
+    "difficulty": "hard",
+    "explain": "The B-site transition metal's d-electron configuration (e.g., the eg occupancy descriptor) largely sets how reaction intermediates bind. A-site substitution is often used indirectly — to tune the B-site's oxidation state."
+  },
+  {
+    "q": "DFT, the workhorse of computational materials science, stands for:",
+    "options": ["Density Functional Theory", "Direct Fourier Transform", "Dynamic Field Testing", "Differential Flow Thermodynamics"],
+    "answer": 0,
+    "difficulty": "easy",
+    "explain": "DFT computes a material's electronic structure from its electron density rather than the many-body wavefunction — making quantum mechanics tractable enough to screen thousands of candidate materials before anyone enters a lab."
+  },
+  {
+    "q": "'Grey' hydrogen is produced by:",
+    "options": ["Steam methane reforming without carbon capture", "Electrolysis with solar power", "Splitting water with nuclear heat", "Fermentation of biomass"],
+    "answer": 0,
+    "difficulty": "medium",
+    "explain": "Over 90% of today's hydrogen is grey: CH₄ + H₂O → CO + 3H₂, emitting ~9–10 kg CO₂ per kg H₂. Replacing it with green hydrogen is one of the largest decarbonization opportunities on Earth."
+  },
+  {
+    "q": "Why do zinc–air batteries offer such high theoretical energy density?",
+    "options": ["One reactant (oxygen) comes free from the surrounding air", "Zinc is the lightest metal", "They operate at very high voltage", "They contain no electrolyte"],
+    "answer": 0,
+    "difficulty": "hard",
+    "explain": "The cathode's active material — oxygen — isn't carried inside the cell; it's breathed from air. Removing that mass from the package gives zinc–air a theoretical energy density (~1,086 Wh/kg) several times that of Li-ion."
+  }
+]

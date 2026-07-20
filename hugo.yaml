@@ -1,4 +1,4 @@
-baseURL: "/" # Change this to your actual domain later
+baseURL: "https://vishalkotha.netlify.app/" # Swap to https://vishalkotha.com/ when the domain is purchased
 languageCode: "en-us"
 title: "Dr. Vishal Kotha | Materials Scientist"
 theme: "PaperMod"
@@ -53,14 +53,22 @@ menu:
       name: Experience
       url: /experience/
       weight: 5
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 6
+    - identifier: quiz
+      name: Quiz
+      url: /quiz/
+      weight: 7
     - identifier: gallery
       name: Gallery
       url: /gallery/
-      weight: 6
+      weight: 8
     - identifier: contact
       name: Contact
       url: /contact/
-      weight: 7
+      weight: 9
 
 markup:
   goldmark:

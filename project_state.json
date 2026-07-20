@@ -1,0 +1,61 @@
+{
+  "project_metadata": {
+    "owner": "Dr. Vishal Kotha",
+    "role": "Materials Scientist & Operational Strategist",
+    "strategy": "Translational Scientist (Hybrid: Academic Depth + Industrial Scale)",
+    "goals": [
+      "Secure prestigious fellowship (MSCA/Humboldt)",
+      "Excel in Industrial R&D (BPCL/HPCL)"
+    ],
+    "design_system": {
+      "primary_color": "#0a192f (Deep Navy)",
+      "accent_color": "#d4af37 (Perovskite Gold)",
+      "fonts": ["Merriweather (Body)", "Roboto (Headers)", "Fira Code (Data)"],
+      "visual_style": "Stanford/MIT Authority with 'Old Design' Visual Flair"
+    }
+  },
+  "current_development_state": {
+    "status": "Standardization Complete",
+    "last_action": "Fixed Footer Layout (2-Column + Ticker) and About Page Images",
+    "critical_files_modified": [
+      {
+        "file": "layouts/_default/baseof.html",
+        "status": "FINAL",
+        "notes": "2-Column Footer, Bottom Roadmap Row, Clean Scripts (No Conflicts)"
+      },
+      {
+        "file": "static/css/style.css",
+        "status": "FINAL",
+        "notes": "Added utility classes (.figure-container, .citation-block, .gallery-card). Fixed footer link hover."
+      },
+      {
+        "file": "content/about/index.md",
+        "status": "FINAL",
+        "notes": "Restored original 'Conscious Engineering' text. Upgraded images to use .gallery-grid."
+      },
+      {
+        "file": "static/data/roadmap.json",
+        "status": "ACTIVE",
+        "notes": "Feeds the footer ticker. Needs to be created in static/data/."
+      }
+    ]
+  },
+  "future_roadmap_data": [
+    {
+      "task": "Join BPCL (Analytical Scientist)",
+      "priority": "high",
+      "status": "JOINING SOON"
+    },
+    {
+      "task": "Review Paper: Perovskite Electrochemistry",
+      "priority": "medium",
+      "status": "DRAFTING"
+    },
+    {
+      "task": "Humboldt / MSCA Fellowship Proposal",
+      "priority": "low",
+      "status": "PLANNING"
+    }
+  ],
+  "next_immediate_action": "Update 'content/experience/index.md' with new BPCL role upon joining."
+}

@@ -13,19 +13,19 @@ weight: 4
 ### The Mystery of Boron Carbide
 Boron Carbide ($B_4C$) is used in bulletproof jackets due to its hardness (30 GPa). However, it fails unexpectedly under high-velocity impact.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/boron-carbide.jpg" alt="Rhombohedral Structure of Boron Carbide" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
-        <strong>Figure 1:</strong> The Rhombohedral unit cell structure of Boron Carbide.
+<div class="figure-container">
+    <img src="/images/boron-carbide.jpg" alt="Rhombohedral Structure" class="figure-img">
+    <p class="figure-caption">
+        <strong>Figure 1:</strong> The Rhombohedral unit cell structure of Boron Carbide ($B_4C$).
     </p>
 </div>
 
 ### Methodology
 During my M.Sc., I utilized **Density Functional Theory (DFT)** codes (VASP, Gaussian) to model the atomic bonding and identify structural weaknesses.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/vasp-model.jpg" alt="VASP Model" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+<div class="figure-container">
+    <img src="/images/vasp-model.jpg" alt="VASP Model" class="figure-img">
+    <p class="figure-caption">
         <strong>Figure 2:</strong> Electron density mapping generated using VASP.
     </p>
 </div>
@@ -33,9 +33,9 @@ During my M.Sc., I utilized **Density Functional Theory (DFT)** codes (VASP, Gau
 ### Discovery
 * **Bonding Analysis:** Identified that specific weak B-B bonds in the inter-polyhedral chains cause structural collapse under high pressure.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/crack-plane.jpg" alt="Crack Plane Analysis" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+<div class="figure-container">
+    <img src="/images/crack-plane.jpg" alt="Crack Plane Analysis" class="figure-img">
+    <p class="figure-caption">
         <strong>Figure 3:</strong> Visualization of the crack plane propagation in the crystal lattice.
     </p>
 </div>
@@ -46,4 +46,8 @@ During my M.Sc., I utilized **Density Functional Theory (DFT)** codes (VASP, Gau
 ### 💻 Open Source Contribution
 I have open-sourced the Python scripts used for plotting the XRD data and automating the VASP log parsing.
 
-[View Code on GitHub ↗](https://github.com/vishalkotha)
+<div style="margin-top: 20px;">
+    <a href="https://github.com/vishalkotha" target="_blank" class="btn-cite" style="border: 2px solid var(--primary-color); color: var(--primary-color) !important;">
+        View Code on GitHub ↗
+    </a>
+</div>

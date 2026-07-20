@@ -1,0 +1,25 @@
+<div class="metrics-summary" style="
+    font-family: 'Roboto', sans-serif; 
+    font-size: 0.95rem; 
+    color: #555; 
+    background: #f9f9f9; 
+    padding: 15px; 
+    border-radius: 4px; 
+    margin-bottom: 40px;
+    border-left: 3px solid #0a192f;
+">
+    <strong>Cumulative Impact:</strong> 
+    {{ if .Site.Data.scholar_metrics }}
+        <strong>{{ .Site.Data.scholar_metrics.pub_count }}</strong> Peer-Reviewed Articles 
+        &nbsp;|&nbsp; 
+        <strong>{{ .Site.Data.scholar_metrics.citations }}</strong> Citations 
+        &nbsp;|&nbsp; 
+        h-index: <strong>{{ .Site.Data.scholar_metrics.h_index }}</strong>
+    {{ else }}
+        Loading metrics...
+    {{ end }}
+    
+    <span style="font-size: 0.8rem; color: #888; float: right; margin-top: 2px;">
+        (Source: {{ .Site.Data.scholar_metrics.source | default "Google Scholar" }}{{ with .Site.Data.scholar_metrics.last_updated }}, updated {{ . }}{{ end }} — auto-synced weekly)
+    </span>
+</div>

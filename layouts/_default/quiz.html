@@ -1,0 +1,167 @@
+{{ define "main" }}
+<div style="max-width: 780px; margin: 0 auto; padding: 40px 20px;">
+
+    <h1 style="color: #0a192f; margin-bottom: 10px;">{{ .Title }}</h1>
+    <div style="margin-bottom: 30px;">{{ .Content }}</div>
+
+    <style>
+        .quiz-shell { background: var(--card-bg, #fff); border: 1px solid #e0e0e0; border-radius: 10px; padding: 30px; box-shadow: 0 4px 14px rgba(10,25,47,0.08); }
+        .quiz-progress-track { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-bottom: 25px; }
+        .quiz-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #d4af37, #0a192f); transition: width 0.4s ease; }
+        .quiz-qnum { font-family: 'Roboto', sans-serif; font-size: 0.8rem; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+        .quiz-diff { float: right; padding: 2px 10px; border-radius: 10px; font-size: 0.7rem; font-weight: bold; color: #fff; }
+        .quiz-question { font-size: 1.25rem; color: #0a192f; margin: 12px 0 22px 0; line-height: 1.5; font-weight: 700; }
+        .quiz-opt { display: block; width: 100%; text-align: left; margin: 10px 0; padding: 14px 18px; border: 2px solid #dcdcdc; border-radius: 8px; background: #fafafa; cursor: pointer; font-size: 1rem; font-family: 'Merriweather', serif; transition: all 0.15s ease; color: #333; }
+        .quiz-opt:hover:not(:disabled) { border-color: #d4af37; background: #fdf8ec; transform: translateX(4px); }
+        .quiz-opt.correct { border-color: #2ed573; background: #eafbf0; font-weight: bold; }
+        .quiz-opt.wrong { border-color: #ff4757; background: #fdecee; }
+        .quiz-opt:disabled { cursor: default; opacity: 0.85; }
+        .quiz-explain { display: none; margin-top: 18px; padding: 16px 20px; border-left: 4px solid #d4af37; background: #fdf8ec; border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.7; color: #333; }
+        .quiz-next { display: none; margin-top: 20px; background: #0a192f; color: #fff; border: none; padding: 12px 30px; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; font-family: 'Roboto', sans-serif; }
+        .quiz-next:hover { background: #d4af37; color: #0a192f; }
+        .quiz-result { text-align: center; }
+        .quiz-score-ring { font-size: 3.2rem; font-weight: bold; color: #d4af37; font-family: 'Roboto', sans-serif; }
+        .quiz-title-badge { font-size: 1.5rem; color: #0a192f; font-weight: bold; margin: 10px 0; }
+        .quiz-cta { display: inline-block; margin: 8px; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; font-family: 'Roboto', sans-serif; }
+        .quiz-cta.gold { background: #d4af37; color: #0a192f; }
+        .quiz-cta.navy { background: #0a192f; color: #fff; }
+        .quiz-cta.outline { border: 2px solid #0a192f; color: #0a192f; }
+        @media (prefers-color-scheme: dark) { .quiz-question { color: inherit; } }
+    </style>
+
+    <div class="quiz-shell">
+        <div id="quiz-start">
+            <p style="font-size:1.05rem;"><strong>10 randomized questions</strong> on perovskites, green hydrogen, batteries, and the tools of materials science. Instant explanations for every answer — right or wrong, you leave knowing more.</p>
+            <button class="quiz-next" style="display:inline-block;" onclick="startQuiz()">🚀 Start the Quiz</button>
+        </div>
+
+        <div id="quiz-play" style="display:none;">
+            <div class="quiz-progress-track"><div class="quiz-progress-fill" id="quiz-bar"></div></div>
+            <span class="quiz-qnum" id="quiz-num"></span>
+            <span class="quiz-diff" id="quiz-diff"></span>
+            <p class="quiz-question" id="quiz-q"></p>
+            <div id="quiz-opts"></div>
+            <div class="quiz-explain" id="quiz-explain"></div>
+            <button class="quiz-next" id="quiz-next" onclick="nextQuestion()">Next →</button>
+        </div>
+
+        <div id="quiz-end" class="quiz-result" style="display:none;">
+            <div class="quiz-score-ring" id="quiz-score"></div>
+            <div class="quiz-title-badge" id="quiz-badge"></div>
+            <p id="quiz-msg" style="max-width: 520px; margin: 0 auto 25px auto; line-height:1.7;"></p>
+            <a href="/contact/" class="quiz-cta navy">Ask Me a Doubt</a>
+            <a href="javascript:void(0)" class="quiz-cta gold" onclick="shareScore()" id="quiz-share">Copy My Score 📋</a>
+            <a href="javascript:void(0)" class="quiz-cta outline" onclick="startQuiz()">Play Again ↺</a>
+            <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">New random questions every round.</p>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        let bank = [], round = [], idx = 0, score = 0;
+        const QUESTIONS_PER_ROUND = 10;
+        const diffColors = { easy: '#2ed573', medium: '#ffa502', hard: '#ff4757' };
+
+        function shuffle(a) {
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        }
+
+        fetch('/data/quiz.json')
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(data => { bank = data; })
+            .catch(() => {
+                document.getElementById('quiz-start').innerHTML =
+                    '<p>⚠️ The quiz could not load. Please refresh the page or <a href="/contact/">let me know</a>.</p>';
+            });
+
+        window.startQuiz = function() {
+            if (!bank.length) return;
+            round = shuffle([...bank]).slice(0, QUESTIONS_PER_ROUND).map(q => {
+                const correctText = q.options[q.answer];
+                const opts = shuffle([...q.options]);
+                return { ...q, opts: opts, correct: opts.indexOf(correctText) };
+            });
+            idx = 0; score = 0;
+            document.getElementById('quiz-start').style.display = 'none';
+            document.getElementById('quiz-end').style.display = 'none';
+            document.getElementById('quiz-play').style.display = 'block';
+            renderQuestion();
+        };
+
+        function renderQuestion() {
+            const q = round[idx];
+            document.getElementById('quiz-bar').style.width = ((idx) / round.length * 100) + '%';
+            document.getElementById('quiz-num').textContent = 'Question ' + (idx + 1) + ' of ' + round.length;
+            const diff = document.getElementById('quiz-diff');
+            diff.textContent = q.difficulty.toUpperCase();
+            diff.style.background = diffColors[q.difficulty] || '#888';
+            document.getElementById('quiz-q').textContent = q.q;
+            const box = document.getElementById('quiz-opts');
+            box.innerHTML = '';
+            q.opts.forEach((opt, i) => {
+                const b = document.createElement('button');
+                b.className = 'quiz-opt';
+                b.textContent = String.fromCharCode(65 + i) + '.  ' + opt;
+                b.onclick = () => answer(i, b);
+                box.appendChild(b);
+            });
+            document.getElementById('quiz-explain').style.display = 'none';
+            document.getElementById('quiz-next').style.display = 'none';
+        }
+
+        function answer(i, btn) {
+            const q = round[idx];
+            const buttons = document.querySelectorAll('.quiz-opt');
+            buttons.forEach(b => b.disabled = true);
+            buttons[q.correct].classList.add('correct');
+            if (i === q.correct) {
+                score++;
+            } else {
+                btn.classList.add('wrong');
+            }
+            const ex = document.getElementById('quiz-explain');
+            ex.innerHTML = (i === q.correct ? '✅ <strong>Correct!</strong> ' : '❌ <strong>Not quite.</strong> ') + q.explain;
+            ex.style.display = 'block';
+            const next = document.getElementById('quiz-next');
+            next.textContent = (idx === round.length - 1) ? 'See My Result 🏆' : 'Next →';
+            next.style.display = 'inline-block';
+            document.getElementById('quiz-bar').style.width = ((idx + 1) / round.length * 100) + '%';
+        }
+
+        window.nextQuestion = function() {
+            idx++;
+            if (idx < round.length) { renderQuestion(); }
+            else { showResult(); }
+        };
+
+        function showResult() {
+            document.getElementById('quiz-play').style.display = 'none';
+            document.getElementById('quiz-end').style.display = 'block';
+            document.getElementById('quiz-score').textContent = score + ' / ' + round.length;
+            let badge, msg;
+            const pct = score / round.length;
+            if (pct >= 0.9) { badge = '🏆 Perovskite Pro'; msg = 'Exceptional. You think like a materials scientist — if you are not already one, the field needs you. Reach out; I would enjoy hearing what you are working on.'; }
+            else if (pct >= 0.7) { badge = '⚡ Lattice Legend in the Making'; msg = 'Strong fundamentals with a few gaps — exactly the profile that grows fastest. The explanations you just read are your roadmap.'; }
+            else if (pct >= 0.4) { badge = '🔬 Rising Researcher'; msg = 'A solid start. Every expert once missed these same questions. Read the blog, replay the quiz — the questions rotate — and watch your score climb.'; }
+            else { badge = '🌱 Curious Mind'; msg = 'The best possible starting point is curiosity, and you clearly have it. Start with the blog post on perovskites, then come back — this quiz will look very different.'; }
+            document.getElementById('quiz-badge').textContent = badge;
+            document.getElementById('quiz-msg').textContent = msg;
+            window._quizShare = 'I scored ' + score + '/' + round.length + ' (' + badge.replace(/^\S+\s/, '') + ') on Dr. Vishal Kotha\'s Materials Science Quiz! Try it: ' + window.location.href;
+        }
+
+        window.shareScore = function() {
+            navigator.clipboard.writeText(window._quizShare || '').then(() => {
+                const el = document.getElementById('quiz-share');
+                el.textContent = 'Copied! ✔';
+                setTimeout(() => { el.textContent = 'Copy My Score 📋'; }, 2000);
+            });
+        };
+    })();
+    </script>
+
+</div>
+{{ end }}

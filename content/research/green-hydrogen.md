@@ -21,9 +21,9 @@ Standard hydrothermal methods often yield large, uncontrolled crystals due to di
 * **The Breakthrough:** This process successfully stabilized **LKMO Nanorods** and truncated cubes—morphologies that were previously impossible to achieve via static methods.
 * **Why it Matters:** High-aspect-ratio nanorods provide ideal pathways for electron transport, crucial for next-gen device applications.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/nanorods.jpg" alt="LKMO Nanorods" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+<div class="figure-container">
+    <img src="/images/nanorods.jpg" alt="LKMO Nanorods" class="figure-img">
+    <p class="figure-caption">
         <strong>Figure 1:</strong> SEM micrographs of high-aspect-ratio LKMO nanorods obtained via the novel DH protocol.
     </p>
 </div>
@@ -39,13 +39,13 @@ To understand the intrinsic transport properties of these nanorods, I fabricated
 3.  **Deposition:** Orion Sputtering was used to deposit Pt/Au contacts.
 
 <div class="project-grid">
-    <article class="project-card" style="text-align: center; border: none; padding: 10px;">
-        <img src="/images/device-5probe.jpg" alt="5 Probe Device" style="height: 200px; object-fit: cover; width: 100%;">
-        <p style="font-size: 0.9rem;"><strong>Fig A:</strong> Five-probe device coupling photolithography and FIB-SEM.</p>
+    <article class="project-card text-center">
+        <img src="/images/device-5probe.jpg" alt="5 Probe Device" style="height: 200px; object-fit: cover; width: 100%; border-radius: 4px;">
+        <p style="font-size: 0.9rem; margin-top: 10px;"><strong>Fig A:</strong> Five-probe device coupling photolithography and FIB-SEM.</p>
     </article>
-    <article class="project-card" style="text-align: center; border: none; padding: 10px;">
-        <img src="/images/device-6probe.jpg" alt="6 Probe FET" style="height: 200px; object-fit: cover; width: 100%;">
-        <p style="font-size: 0.9rem;"><strong>Fig B:</strong> Six-probe FET on a single LKMO nanorod.</p>
+    <article class="project-card text-center">
+        <img src="/images/device-6probe.jpg" alt="6 Probe FET" style="height: 200px; object-fit: cover; width: 100%; border-radius: 4px;">
+        <p style="font-size: 0.9rem; margin-top: 10px;"><strong>Fig B:</strong> Six-probe FET on a single LKMO nanorod.</p>
     </article>
 </div>
 

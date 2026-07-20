@@ -1,0 +1,22 @@
+[
+  {
+    "task": "Review Paper: Perovskite Electrochemistry",
+    "priority": "high",
+    "status": "DRAFTING"
+  },
+  {
+    "task": "MSCA / Humboldt Fellowship Proposal",
+    "priority": "high",
+    "status": "IN PREPARATION"
+  },
+  {
+    "task": "Science Blog & Interactive Quiz",
+    "priority": "medium",
+    "status": "LIVE"
+  },
+  {
+    "task": "Mentorship Hub for Young Researchers",
+    "priority": "medium",
+    "status": "PLANNED"
+  }
+]

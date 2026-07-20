@@ -20,9 +20,9 @@ Incorporating volatile alkali metals (like Potassium) into the Perovskite lattic
 
 I solved this by developing a **low-temperature ($265^{\circ}C$) hydrothermal route**, effectively "trapping" the Potassium ions within the lattice.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/lkmo-vial.jpg" alt="LKMO Powder" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+<div class="figure-container">
+    <img src="/images/lkmo-vial.jpg" alt="LKMO Powder" class="figure-img">
+    <p class="figure-caption">
         <strong>Figure 1:</strong> 50 gram-scale batch of phase-pure LKMO microcubes synthesized via the optimized hydrothermal protocol.
     </p>
 </div>
@@ -32,9 +32,9 @@ I solved this by developing a **low-temperature ($265^{\circ}C$) hydrothermal ro
 ### 2. Advanced Characterization (PFM)
 To verify the ferroelectric domains and surface potential, I conducted **Piezo-Force Microscopy (PFM)** on individual microcubes.
 
-<div style="text-align: center; margin: 30px 0;">
-    <img src="/images/pfm-analysis.jpg" alt="PFM Analysis" style="height: 300px; width: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-    <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+<div class="figure-container">
+    <img src="/images/pfm-analysis.jpg" alt="PFM Analysis" class="figure-img">
+    <p class="figure-caption">
         <strong>Figure 2:</strong> Conducting PFM in an AFM instrument on top of a single LKMO microcube to study electromechanical coupling.
     </p>
 </div>
@@ -47,8 +47,12 @@ I applied these microcubes as the air-cathode catalyst in a rechargeable Zinc-Ai
 * **Bifunctionality:** The catalyst showed a half-wave onset potential of **0.78 V** for ORR and an onset potential of **1.66 V** for OER.
 * **Stability:** The battery operated for **1000 cycles (100 hours)** with **no visible sign of degradation**, outperforming traditional catalysts.
 
-![Battery Performance](/images/battery-data.jpg)
-*Figure: Charge-discharge cycling performance showing exceptional stability.*
+<div class="figure-container">
+    <img src="/images/battery-data.jpg" alt="Battery Performance" class="figure-img">
+    <p class="figure-caption">
+        <strong>Figure 3:</strong> Charge-discharge cycling performance showing exceptional stability over 100 hours.
+    </p>
+</div>
 
 ---
 
@@ -59,9 +63,8 @@ In a separate study, I extended the utility of LKMO to the **pharmaceutical sect
 * **The Win:** Achieved **100% conversion** at 120°C/7 bar $H_2$, outperforming standard $LaSrMnO_3$ (LSMO).
 * **The Science:** The K-substitution exposes active $Mn$ sites on the surface, whereas Sr-substitution tends to form an inert $SrO$ passivation layer.
 
-<div>
-    <p>
-        <a href="/files/Final thesis-Vishal_Kotha.pdf"
-        style="color: #000;">[Read Full PhD Thesis]</a>
-    </p>
+<div style="margin-top: 40px; text-align: center;">
+    <a href="/files/Final thesis-Vishal_Kotha.pdf" class="btn-cite" style="background: var(--primary-color); color: #fff !important; padding: 12px 25px;">
+        📄 Download Full PhD Thesis (PDF)
+    </a>
 </div>

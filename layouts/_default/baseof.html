@@ -3,10 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }}</title>
+
+    {{- $desc := .Description | default .Params.description | default .Site.Params.description -}}
+    {{- $title := cond .IsHome "Dr. Vishal Kotha — Materials Scientist | Perovskites & Green Hydrogen" (printf "%s | Dr. Vishal Kotha" .Title) -}}
+    <title>{{ $title }}</title>
+    <meta name="description" content="{{ $desc }}">
+    <meta name="author" content="Dr. Vishal Kotha">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- OpenGraph / social sharing -->
+    <meta property="og:site_name" content="Dr. Vishal Kotha">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $desc }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:image" content="{{ "images/og-card.png" | absURL }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $desc }}">
+    <meta name="twitter:image" content="{{ "images/og-card.png" | absURL }}">
+
     <link rel="icon" type="image/png" href="/images/logo.png">
+    <link rel="alternate" type="application/rss+xml" title="Dr. Vishal Kotha — Science Notebook" href="{{ "blog/index.xml" | absURL }}">
+
+    {{- if .IsHome }}
+    <!-- schema.org: machine-readable identity for search engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vishal Kotha",
+      "honorificPrefix": "Dr.",
+      "givenName": "Vishal",
+      "familyName": "Kotha",
+      "jobTitle": "Scientist-B (Materials Scientist)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Bharat Petroleum Corporation Limited — Corporate R&D Centre",
+        "address": { "@type": "PostalAddress", "addressLocality": "Greater Noida", "addressCountry": "IN" }
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Indian Institute of Technology Bombay" },
+        { "@type": "CollegeOrUniversity", "name": "Pondicherry University" },
+        { "@type": "CollegeOrUniversity", "name": "Khallikote Unitary University" }
+      ],
+      "description": "Materials chemist (Ph.D., IIT Bombay) leading alkaline water electrolyzer R&D for green hydrogen at BPCL-CRDC. Expert in perovskite electrocatalysis, nanofabrication, and advanced characterization.",
+      "email": "mailto:vishalkotha1@gmail.com",
+      "url": "{{ .Site.BaseURL }}",
+      "image": "{{ "images/og-card.png" | absURL }}",
+      "knowsAbout": ["Perovskite oxides", "Green hydrogen", "Electrocatalysis", "Zinc-air batteries", "Nanofabrication", "Electron microscopy", "X-ray diffraction", "Water electrolysis"],
+      "sameAs": [
+        "https://www.linkedin.com/in/vishal-kotha",
+        "https://scholar.google.com/citations?user=ryaF3dIAAAAJ",
+        "https://orcid.org/0000-0002-1499-4646"
+      ]
+    }
+    </script>
+    {{- end }}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css"> 
+    <link rel="stylesheet" href="/css/style.css">
     <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
     <script>
@@ -38,6 +95,8 @@
             <li><a href="/research">Research</a></li>
             <li><a href="/publications">Publications</a></li>
             <li><a href="/experience">Experience</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/quiz" style="color: #d4af37; font-weight: bold;">Quiz 🧪</a></li>
             <li><a href="/gallery">Gallery</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
@@ -55,22 +114,68 @@
             <div class="footer-bio">
                 <h4>Dr. Vishal Kotha</h4>
                 <p>
-                    Materials Scientist & Data Engineer. Expert in tuning transition metal perovskites for energy applications. 
-                    Proven track record in nanofabrication, computational modeling, and operational leadership.
+                    Materials Chemist (Ph.D., IIT Bombay) leading green-hydrogen electrolyzer R&D at BPCL-CRDC.
+                    Expert in perovskite electrocatalysis, nanofabrication, and advanced characterization — 11 peer-reviewed publications.
                 </p>
-            </div>
-
-            <div class="footer-social">
-                <div class="social-links">
-                    <a href="mailto:vishalkothal@gmail.com">Email</a>
-                    <a href="https://linkedin.com/in/vishal-kotha" target="_blank">LinkedIn</a>
-                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a>
-                </div>
                 <p class="copyright">&copy; 2025 Dr. Vishal Kotha</p>
             </div>
 
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="mailto:vishalkotha1@gmail.com">Email ↗</a>
+                    <a href="https://www.linkedin.com/in/vishal-kotha" target="_blank">LinkedIn ↗</a>
+                    <a href="https://scholar.google.com/citations?user=ryaF3dIAAAAJ" target="_blank">Google Scholar ↗</a>
+                    <a href="https://orcid.org/0000-0002-1499-4646" target="_blank">ORCID ↗</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-roadmap-row">
+            <div class="roadmap-content">
+                <span class="roadmap-label">🚀 Coming Next:</span>
+                <ul id="roadmap-list" class="roadmap-inline-list">
+                    <li>Loading updates...</li>
+                </ul>
+            </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('/data/roadmap.json')
+            .then(response => {
+                if (!response.ok) throw new Error("HTTP error " + response.status);
+                return response.json();
+            })
+            .then(data => {
+                const list = document.getElementById('roadmap-list');
+                if(list) {
+                    list.innerHTML = ''; 
+                    // Take only top 2 items to prevent overcrowding
+                    data.slice(0, 2).forEach(item => {
+                        let badgeColor = '#2ed573'; 
+                        if (item.priority === 'high') badgeColor = '#ff4757';
+                        if (item.priority === 'medium') badgeColor = '#ffa502';
+
+                        const li = document.createElement('li');
+                        // Inline style for horizontal layout
+                        li.style.cssText = "display: inline-flex; align-items: center; margin-left: 20px; font-size: 0.85rem;";
+                        
+                        li.innerHTML = `
+                            <span style="color: #666; margin-right: 8px;">${item.task}</span>
+                            <span style="padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; color: #fff; background-color: ${badgeColor}">
+                                ${item.status}
+                            </span>
+                        `;
+                        list.appendChild(li);
+                    });
+                }
+            })
+            .catch(error => console.error('Roadmap Error:', error));
+    });
+    </script>
 
     <script>
         const nav = document.querySelector('nav');
@@ -81,15 +186,11 @@
                 nav.classList.remove('scrolled');
             }
         });
-    </script>
-    <script>
-        /* =========================================
-           1. SCROLL TO TOP (Polite Animation)
-           ========================================= */
-        const mybutton = document.getElementById("myBtn");
-        let isAutoScrolling = false; // The Kill Switch flag
 
-        // A. Button Visibility
+        /* SCROLL TO TOP */
+        const mybutton = document.getElementById("myBtn");
+        let isAutoScrolling = false; 
+
         if (mybutton) {
             window.addEventListener('scroll', function() {
                 if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -100,68 +201,58 @@
             });
         }
 
-        // B. The Scroll Function
         window.topFunction = function() {
-            isAutoScrolling = true; // Engage auto-pilot
-            
+            isAutoScrolling = true; 
             function step() {
-                if (!isAutoScrolling) return; // Stop instantly if user interrupts
-
+                if (!isAutoScrolling) return;
                 const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-                
                 if (currentScroll > 0) {
                     window.requestAnimationFrame(step);
-                    // Move up by 1/8th of remaining distance (Smooth deceleration)
                     window.scrollTo(0, currentScroll - (currentScroll / 8));
                 } else {
-                    isAutoScrolling = false; // We arrived
+                    isAutoScrolling = false; 
                 }
             }
             step();
         };
 
-        // C. The Interrupt Listeners (Stop if user interacts)
         window.addEventListener("wheel", () => isAutoScrolling = false);
         window.addEventListener("touchmove", () => isAutoScrolling = false);
         window.addEventListener("keydown", () => isAutoScrolling = false);
+    </script>
 
-        // CAROUSEL SCROLL FUNCTION
+    <script>
         function scrollPubs(direction) {
             const track = document.getElementById('pubTrack');
-            const scrollAmount = 420; // Width of card + gap
-            
-            if (direction === 1) {
-                track.scrollLeft += scrollAmount;
-            } else {
-                track.scrollLeft -= scrollAmount;
+            const scrollAmount = 420; 
+            if (track) {
+                if (direction === 1) track.scrollLeft += scrollAmount;
+                else track.scrollLeft -= scrollAmount;
             }
         }
-
-        /* --- AUTO-SCROLL FOR PUBLICATIONS --- */
+        
+        // Auto Scroll
         const pubTrack = document.getElementById('pubTrack');
-        let autoScrollSpeed = 0.5; // Lower number = Slower/Smoother
+        let autoScrollSpeed = 0.5; 
         let isHovering = false;
-        let scrollId;
-
+        
         function startAutoScroll() {
             if (!isHovering && pubTrack) {
                 pubTrack.scrollLeft += autoScrollSpeed;
-                // Loop back to start if at end (Optional: creates infinite feel)
                 if (pubTrack.scrollLeft + pubTrack.clientWidth >= pubTrack.scrollWidth - 1) {
                     pubTrack.scrollLeft = 0; 
                 }
             }
-            scrollId = requestAnimationFrame(startAutoScroll);
+            requestAnimationFrame(startAutoScroll);
         }
 
-        // Stop scrolling when user interacts
         if (pubTrack) {
             pubTrack.addEventListener('mouseenter', () => isHovering = true);
             pubTrack.addEventListener('mouseleave', () => isHovering = false);
-            // Start the engine
             startAutoScroll();
         }
     </script>
+
     <div id="lightbox-modal" class="lightbox">
         <span class="close-btn">&times;</span>
         <div class="lightbox-content">
@@ -170,70 +261,61 @@
         </div>
     </div>
     <script>
-        /* --- LIGHTBOX LOGIC --- */
         document.addEventListener('DOMContentLoaded', function () {
-            console.log("Engine Loaded");
-
-            // Grab the modal elements
             const lightbox = document.getElementById('lightbox-modal');
             const lightboxImg = document.getElementById('lightbox-img');
             const lightboxCaption = document.getElementById('lightbox-caption');
             const closeBtn = document.querySelector('.close-btn');
 
-            // 1. GLOBAL CLICK LISTENER (Event Delegation)
-            // This watches the whole page for clicks on ".lightbox-trigger"
             document.body.addEventListener('click', function(e) {
-                
-                // Check if the clicked element (or its parent) has the class 'lightbox-trigger'
                 const trigger = e.target.closest('.lightbox-trigger');
-                
                 if (trigger) {
-                    e.preventDefault(); // STOP the browser from opening the link
-                    
-                    // Get data from the link
-                    const imgSrc = trigger.getAttribute('href');
-                    const captionText = trigger.getAttribute('data-caption');
-
-                    // Update the modal content
-                    lightboxImg.src = imgSrc;
-                    lightboxCaption.innerHTML = captionText || ''; 
-                    
-                    // Show the modal
+                    e.preventDefault(); 
+                    lightboxImg.src = trigger.getAttribute('href');
+                    lightboxCaption.innerHTML = trigger.getAttribute('data-caption') || ''; 
                     lightbox.style.display = 'flex';
                 }
             });
 
-            // 2. Close Function
-            function closeBox() {
-                if (lightbox) lightbox.style.display = 'none';
-            }
-
-            // 3. Close Triggers
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeBox);
-            }
-            
-            if (lightbox) {
-                lightbox.addEventListener('click', function(e) {
-                    if (e.target === lightbox) closeBox(); // Click outside image to close
-                });
-            }
-
-            // 4. Keyboard Support
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') closeBox();
-            });
+            function closeBox() { if (lightbox) lightbox.style.display = 'none'; }
+            if (closeBtn) closeBtn.addEventListener('click', closeBox);
+            if (lightbox) lightbox.addEventListener('click', e => { if (e.target === lightbox) closeBox(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
         });
 
-        /* =========================================
-        D. DARK MODE LOGIC
-        ========================================= */
+        // Citation Copy Helper
+        window.copyCitation = function(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => alert('Citation copied!'));
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                textArea.style.position = "fixed";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try { document.execCommand('copy'); alert('Citation copied!'); } catch (err) {}
+                document.body.removeChild(textArea);
+            }
+        };
+        
+        // Altmetric Fix
+        document.addEventListener('click', function(e) {
+            const target = e.target.closest('a');
+            if (target && target.href.includes('altmetric.com')) {
+                e.preventDefault();
+                window.open(target.href, '_blank');
+            }
+        }, true);
+    </script>
+
+    <script>
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
 
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
-            if (currentTheme === 'dark') {
+            if (currentTheme === 'dark' && toggleSwitch) {
                 toggleSwitch.checked = true;
             }
         }
@@ -251,44 +333,6 @@
         if (toggleSwitch) {
             toggleSwitch.addEventListener('change', switchTheme, false);
         }
-
-        /* =========================================
-        E. COPY CITATION LOGIC (Global Scope)
-        ========================================= */
-        // We attach this to 'window' so your HTML button can find it
-        window.copyCitation = function(text) {
-            // 1. Try the modern API
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(text).then(() => {
-                    alert('Citation copied!');
-                });
-            } else {
-                // 2. Fallback for older browsers
-                const textArea = document.createElement("textarea");
-                textArea.value = text;
-                textArea.style.position = "fixed";
-                document.body.appendChild(textArea);
-                textArea.focus();
-                textArea.select();
-                try {
-                    document.execCommand('copy');
-                    alert('Citation copied!');
-                } catch (err) {
-                    console.error('Copy failed', err);
-                }
-                document.body.removeChild(textArea);
-            }
-        };
-    </script>
-    <script>
-        document.addEventListener('click', function(e) {
-            // Check if the clicked element is an Altmetric link
-            const target = e.target.closest('a');
-            if (target && target.href.includes('altmetric.com')) {
-                e.preventDefault();       // Stop it from opening in this tab
-                window.open(target.href, '_blank'); // Open in new tab
-            }
-        }, true); // The 'true' ensures this runs before other scripts
     </script>
 </body>
 </html>

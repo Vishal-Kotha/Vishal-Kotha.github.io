@@ -53,7 +53,7 @@ I utilized High-Resolution TEM (HRTEM) to image the lattice fringes directly.
         <a href="/images/icon-microscopy.jpg" class="lightbox-trigger" data-caption="<strong>The Evidence:</strong> HRTEM micrograph of NiFe-LDH. The 'wavy' lattice fringes indicate turbostratic disorder, creating pathways for fast ion diffusion.">
             <img src="/images/icon-microscopy.jpg" alt="Lattice Fringes" style="height: 250px; object-fit: cover; width: 100%;">
         </a>
-        <figcaption>Figure 2: Atomic resolution IFFT analysis of lattice fringes.</figcaption>
+        <figcaption>Figure 2: Atomic resolution IFFT analysis</figcaption>
     </figure>
     <figure>
         <a href="/images/action-xrd.jpg" class="lightbox-trigger" data-caption="<strong>The Correlation:</strong> Selected Area Electron Diffraction (SAED) pattern confirming the polycrystalline nature of the LDH nanosheets.">
@@ -66,14 +66,15 @@ I utilized High-Resolution TEM (HRTEM) to image the lattice fringes directly.
 ---
 
 ### 📜 Source & Citation
-<div style="background-color: #f9f9f9; padding: 20px; border-left: 5px solid #d4af37; font-size: 0.9rem; margin-top: 20px;">
+
+<div class="citation-block">
     <p><strong>Note:</strong> Portions of this methodology are derived from the author's doctoral work. Please cite as follows:</p>
-    <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px;">
-        Kotha, V. (2022). <em>Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes...</em> [Doctoral dissertation, IIT Bombay].
-    </p>
-    <p style="margin-top: 10px;">
+    <span class="citation-text">
+        Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].
+    </span>
+    <div style="margin-top: 15px;">
         <button class="btn-cite" onclick="window.copyCitation('Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].')">
             Copy Citation
         </button>
-    </p>
+    </div>
 </div>

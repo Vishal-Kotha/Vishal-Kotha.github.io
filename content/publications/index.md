@@ -1,9 +1,12 @@
 ---
 title: "Publications"
 layout: "page"
+url: "/publications/"
 ---
 
 A selected list of peer-reviewed articles focusing on **Perovskites**, **Green Hydrogen**, and **Energy Storage**.
+
+{{< metrics >}}
 
 <div style="max-width: 900px; margin: 0 auto;">
     <h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 50px;">2024</h2>

@@ -1,0 +1,27 @@
+How to use this Tracker File
+Save it: Create a file named project-tracker.json in your project folder.
+
+Update it: Whenever you finish a big task (like adding a blog or fixing a bug), add a new entry under the phases or future_roadmap section.
+
+Why it helps:
+
+Context for AI: If you come back to me (or another AI) in 3 months, you can simply paste this file, and I will instantly know exactly where we left off, what tech stack you use, and how you deploy.
+
+Resume Material: This file is essentially a technical case study. You can use the "details" to write bullet points for your resume (e.g., "Solved critical credit usage issue by migrating CI/CD pipeline to manual CLI deployments").
+
+----------
+
+Why this is powerful
+Now, whenever you want to update your site's "Status" for visitors, you don't need to touch the HTML code.
+
+You just:
+
+Open project-tracker.json.
+
+Change "SEO Optimization" status to "Completed".
+
+Add a new item to future_roadmap.
+
+Run your deployment command (netlify deploy --prod).
+
+The website updates itself automatically!

@@ -39,10 +39,17 @@ In electrocatalysis, the bulk formula doesn't matter as much as the surface stat
 </div>
 
 ---
+
 ### 📜 Source & Citation
-<div style="background-color: #f9f9f9; padding: 20px; border-left: 5px solid #d4af37; font-size: 0.9rem; margin-top: 20px;">
+
+<div class="citation-block">
     <p><strong>Note:</strong> Data derived from the author's doctoral research. Citation:</p>
-    <p style="font-family: monospace; background: #eee; padding: 10px; border-radius: 4px;">
-        Kotha, V. (2022). <em>Tailoring Transition Metal Perovskite Oxides...</em> [Doctoral dissertation, IIT Bombay].
-    </p>
+    <span class="citation-text">
+        Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].
+    </span>
+    <div style="margin-top: 15px;">
+        <button class="btn-cite" onclick="window.copyCitation('Kotha, V. (2022). Tailoring Transition Metal Perovskite Oxides via Low-Temperature Hydrothermal Routes as Potential Candidates for Catalytic Applications [Doctoral dissertation, IIT Bombay].')">
+            Copy Citation
+        </button>
+    </div>
 </div>

@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article style="max-width: 780px; margin: 0 auto; padding: 40px 20px;">
+
+    <p style="font-size: 0.85rem; color: #888; font-family: 'Roboto', sans-serif; margin-bottom: 8px;">
+        {{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read
+        {{ with .Params.tags }} · {{ range . }}<span style="background:#f0ead6; color:#0a192f; padding:2px 8px; border-radius:10px; font-size:0.75rem; margin-right:5px;">{{ . }}</span>{{ end }}{{ end }}
+    </p>
+
+    <h1 style="color: #0a192f; margin-top: 0; line-height: 1.25;">{{ .Title }}</h1>
+
+    {{ if .Params.image }}
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" style="width:100%; border-radius:6px; margin: 20px 0;">
+    {{ end }}
+
+    <div style="line-height: 1.8; font-size: 1.02rem;">
+        {{ .Content }}
+    </div>
+
+    <hr style="margin: 50px 0 30px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+    <div style="background: #0a192f; color: #fff; border-radius: 8px; padding: 30px; text-align: center;">
+        <h3 style="color: #d4af37; margin-top: 0;">Curious? Don't let the doubt die.</h3>
+        <p style="color: #ccd6f6; font-size: 0.95rem;">
+            Young researchers — if anything here raised a question, send it to me. I answer every serious doubt.
+        </p>
+        <div style="margin-top: 20px;">
+            <a href="/contact/" style="background: #d4af37; color: #0a192f; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">Ask Me a Doubt</a>
+            <a href="/quiz/" style="border: 1px solid #d4af37; color: #d4af37; padding: 10px 22px; border-radius: 4px; text-decoration: none; font-weight: bold; margin: 5px; display: inline-block;">Take the Science Quiz</a>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px;">
+        <a href="/blog/" style="color: #d4af37; font-weight: bold; text-decoration: none;">← All posts</a>
+    </p>
+
+</article>
+{{ end }}
