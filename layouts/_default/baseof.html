@@ -117,7 +117,7 @@
         {{ $idx := -1 }}
         {{ range $i, $p := $order }}{{ if eq $p $cur }}{{ $idx = $i }}{{ end }}{{ end }}
         {{ if ge $idx 0 }}
-        <nav class="page-nav" aria-label="Section navigation">
+        <div class="page-nav" role="navigation" aria-label="Section navigation">
             {{ if gt $idx 0 }}
                 {{ $prev := index $order (sub $idx 1) }}
                 <a href="{{ $prev }}" rel="prev" data-page-nav="prev">← {{ index $names $prev }}</a>
@@ -126,7 +126,7 @@
                 {{ $next := index $order (add $idx 1) }}
                 <a href="{{ $next }}" rel="next" data-page-nav="next">{{ index $names $next }} →</a>
             {{ end }}
-        </nav>
+        </div>
         {{ end }}
     </main>
 
