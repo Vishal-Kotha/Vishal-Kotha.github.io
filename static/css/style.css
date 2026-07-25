@@ -1745,3 +1745,43 @@ input, select, textarea { font-size: 16px !important; }
     color: #d4af37;
     transform: translateY(-2px);
 }
+
+/* ============ SHRINKING STICKY HEADER + BOTTOM-ANCHORED PAGE NAV (v3) ============ */
+
+/* Smooth transitions for the condense-on-scroll effect */
+nav {
+    transition: height 0.28s cubic-bezier(0.16,1,0.3,1),
+                box-shadow 0.28s ease,
+                background 0.28s ease;
+}
+.brand-logo,
+.brand-text,
+nav ul a {
+    transition: all 0.24s cubic-bezier(0.16,1,0.3,1);
+}
+
+/* Desktop only — mobile keeps its own compact 64px bar */
+@media (min-width: 901px) {
+    nav.scrolled {
+        height: 54px;
+        box-shadow: 0 4px 20px rgba(10,25,47,0.12);
+        background: rgba(255,255,255,0.94);
+    }
+    [data-theme="dark"] nav.scrolled {
+        background: rgba(10,25,47,0.94);
+    }
+    nav.scrolled .brand-logo { height: 32px; }
+    nav.scrolled .brand-text { font-size: 1.08rem; }
+    nav.scrolled ul a { font-size: 0.9rem; }
+}
+
+/* Keep the prev/next bar pinned to the bottom, even on short pages,
+   so it never rides up under the header. */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 200px);
+}
+.page-nav {
+    margin-top: auto;   /* pushes it to the bottom of the flex column */
+}
