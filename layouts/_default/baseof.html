@@ -90,7 +90,11 @@
             <span class="brand-text">Dr. Vishal Kotha</span>
         </a>
 
-        <ul>
+        <button id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul id="nav-menu">
             <li><a href="/about">About</a></li>
             <li><a href="/expertise">Expertise</a></li>
             <li><a href="/research">Research</a></li>
@@ -105,7 +109,80 @@
 
     <main>
         {{ block "main" . }}{{ end }}
+
+        {{/* Sequential prev/next navigation across the main site sections */}}
+        {{ $order := slice "/" "/about/" "/expertise/" "/research/" "/publications/" "/experience/" "/blog/" "/quiz/" "/gallery/" "/contact/" }}
+        {{ $names := dict "/" "Home" "/about/" "About" "/expertise/" "Expertise" "/research/" "Research" "/publications/" "Publications" "/experience/" "Experience" "/blog/" "Blog" "/quiz/" "Quiz" "/gallery/" "Gallery" "/contact/" "Contact" }}
+        {{ $cur := .RelPermalink }}
+        {{ $idx := -1 }}
+        {{ range $i, $p := $order }}{{ if eq $p $cur }}{{ $idx = $i }}{{ end }}{{ end }}
+        {{ if ge $idx 0 }}
+        <nav class="page-nav" aria-label="Section navigation">
+            {{ if gt $idx 0 }}
+                {{ $prev := index $order (sub $idx 1) }}
+                <a href="{{ $prev }}" rel="prev" data-page-nav="prev">← {{ index $names $prev }}</a>
+            {{ else }}<span></span>{{ end }}
+            {{ if lt $idx (sub (len $order) 1) }}
+                {{ $next := index $order (add $idx 1) }}
+                <a href="{{ $next }}" rel="next" data-page-nav="next">{{ index $names $next }} →</a>
+            {{ end }}
+        </nav>
+        {{ end }}
     </main>
+
+    <script>
+    /* Keyboard ← / → move between sections (ignored while typing) */
+    (function () {
+        document.addEventListener('keydown', function (e) {
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            var t = e.target.tagName;
+            if (t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT' || e.target.isContentEditable) return;
+            var sel = e.key === 'ArrowRight' ? '[data-page-nav=next]' : (e.key === 'ArrowLeft' ? '[data-page-nav=prev]' : null);
+            if (!sel) return;
+            var link = document.querySelector(sel);
+            if (link) window.location.href = link.getAttribute('href');
+        });
+    })();
+    </script>
+    {{ if .IsHome }}<script defer src="/js/crystal.js"></script>{{ end }}
+
+    <script>
+    /* Mobile menu toggle */
+    (function () {
+        var btn = document.getElementById('nav-toggle');
+        var menu = document.getElementById('nav-menu');
+        if (!btn || !menu) return;
+        btn.addEventListener('click', function () {
+            var open = menu.classList.toggle('open');
+            btn.classList.toggle('open', open);
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        });
+        menu.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                menu.classList.remove('open');
+                btn.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    /* Scroll-reveal micro-motion (skipped for reduced-motion users) */
+    (function () {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var targets = document.querySelectorAll('.project-card, .vision-container, .timeline-item, .pub-card, .crystal-section, article.project-card');
+        if (!targets.length || !('IntersectionObserver' in window)) return;
+        targets.forEach(function (t) { t.classList.add('js-reveal'); });
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+                if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
+            });
+        }, { threshold: 0.12 });
+        targets.forEach(function (t) { io.observe(t); });
+    })();
+    </script>
     
     <a href="javascript:void(0);" onclick="topFunction(); return false;" id="myBtn" title="Go to top" style="text-decoration:none; display:none; align-items:center; justify-content:center;">↑</a>
     

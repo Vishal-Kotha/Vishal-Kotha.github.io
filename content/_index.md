@@ -22,6 +22,24 @@ layout: "home"
   </div>
 </div>
 
+<div class="crystal-section">
+    <h2 class="section-label">Touch My Research</h2>
+    <div class="crystal-flex">
+        <div id="crystal-wrap" aria-label="Interactive 3D perovskite crystal structure">
+            <p style="color:#888; text-align:center; padding:60px 0;">Loading crystal…</p>
+        </div>
+        <div class="crystal-side">
+            <p id="crystal-caption">
+                <strong>LaMnO₃ perovskite (ABO₃)</strong> — gold: La³⁺ (A-site) · blue: Mn (B-site) · red: O²⁻ octahedron. Drag to rotate.
+            </p>
+            <button id="dope-btn" class="btn-gold" style="border:none; cursor:pointer; font-size:0.95rem;">⚗️ Substitute K⁺ — my Ph.D. trick</button>
+            <p style="font-size:0.85rem; color:#888; margin-top:15px;">
+                This is the actual crystal family from my doctoral work. Curious why imperfection makes it better? <a href="/blog/why-perovskites-rule-energy-materials/" style="color:#d4af37; font-weight:bold;">Read the story</a> or <a href="/quiz/" style="color:#d4af37; font-weight:bold;">test yourself</a>.
+            </p>
+        </div>
+    </div>
+</div>
+
 <div class="vision-container">
     <h2 class="section-label">Research Vision</h2>
     <p class="vision-quote">

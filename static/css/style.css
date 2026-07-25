@@ -1529,3 +1529,219 @@ button.btn-cite:hover {
     display: block;
     word-break: break-all; /* Prevents long DOIs from breaking layout */
 }
+/* ============ WOW LAYER (crystal viewer + motion) ============ */
+.crystal-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+.crystal-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#crystal-wrap {
+    width: 440px;
+    max-width: 90vw;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.crystal-side {
+    max-width: 340px;
+    text-align: left;
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+#crystal-caption { transition: opacity 0.3s ease; }
+
+/* Scroll reveal */
+.js-reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js-reveal.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+/* Card micro-physics */
+.project-card, .pub-card {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.project-card:hover, .pub-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(10, 25, 47, 0.12);
+}
+
+/* Keyboard focus polish */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid #d4af37;
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+/* ============ MOBILE OVERHAUL (v2) ============ */
+
+/* Hamburger button — hidden on desktop */
+#nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+#nav-toggle span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: #0a192f;
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), opacity 0.2s ease;
+}
+#nav-toggle.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+#nav-toggle.open span:nth-child(2) { opacity: 0; }
+#nav-toggle.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: row !important;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px !important;
+        padding: 0 18px !important;
+    }
+    #nav-toggle { display: flex; }
+
+    nav ul#nav-menu {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.99);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0 !important;
+        padding: 8px 0 18px 0 !important;
+        box-shadow: 0 12px 24px rgba(10,25,47,0.10);
+        border-top: 1px solid #eee;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: max-height 0.35s cubic-bezier(0.16,1,0.3,1), opacity 0.25s ease;
+    }
+    nav ul#nav-menu.open {
+        max-height: 85vh;
+        opacity: 1;
+        pointer-events: auto;
+        overflow-y: auto;
+    }
+    nav ul#nav-menu li {
+        margin: 0 !important;
+        border-bottom: 1px solid #f2f2f2;
+    }
+    nav ul#nav-menu li:last-child { border-bottom: none; }
+    nav ul#nav-menu li a {
+        display: block;
+        padding: 15px 24px;
+        font-size: 1.02rem;
+        border-bottom: none !important;
+    }
+    nav ul#nav-menu li a:active { background: #fdf8ec; }
+
+    body { padding-top: 64px !important; }
+}
+
+/* Contact page: the right column now holds the FORM, not just an image */
+@media (max-width: 900px) {
+    .contact-split { flex-direction: column !important; }
+    .contact-image-area {
+        height: auto !important;
+        min-height: 0 !important;
+        background-image: none !important;
+        flex: 1 1 auto !important;
+        padding: 0 20px 30px 20px;
+    }
+    .contact-text-area { padding: 30px 20px !important; }
+}
+.contact-split { overflow: visible !important; }
+
+/* Desktop: give the form column breathing room */
+@media (min-width: 901px) {
+    .contact-image-area {
+        background-image: none;
+        padding: 40px 40px 40px 0;
+        min-height: 0;
+    }
+}
+
+/* Crystal viewer on small screens */
+@media (max-width: 900px) {
+    .crystal-flex { gap: 24px; }
+    .crystal-side { text-align: center; max-width: 100%; }
+    #crystal-wrap { width: 340px; min-height: 260px; }
+    .crystal-section { padding: 24px 14px; margin: 30px auto; }
+}
+
+/* Typography + tap-target comfort on phones */
+@media (max-width: 600px) {
+    body { font-size: 16.5px; }
+    h1 { font-size: 1.85rem !important; line-height: 1.25; }
+    h2 { font-size: 1.4rem !important; }
+    .hero-buttons a {
+        display: block;
+        margin: 10px auto !important;
+        text-align: center;
+        max-width: 320px;
+    }
+    .quiz-opt { padding: 15px 16px !important; font-size: 0.97rem !important; }
+    .quiz-cta { display: block !important; margin: 10px auto !important; max-width: 300px; text-align: center; }
+    table { display: block; overflow-x: auto; }
+    img { max-width: 100%; height: auto; }
+}
+
+/* Prevent any horizontal overflow site-wide */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* iOS: stop auto-zoom when focusing form fields (needs >=16px) */
+input, select, textarea { font-size: 16px !important; }
+
+/* Sequential page navigation */
+.page-nav {
+    max-width: 900px;
+    margin: 60px auto 20px auto;
+    padding: 22px 20px 0 20px;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+}
+.page-nav a {
+    color: #0a192f;
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 9px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+.page-nav a:hover {
+    border-color: #d4af37;
+    color: #d4af37;
+    transform: translateY(-2px);
+}

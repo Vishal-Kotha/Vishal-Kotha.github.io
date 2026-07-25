@@ -141,23 +141,23 @@ A timeline of engineering leadership, scalable research, and operational excelle
 </div>
 
 <div style="max-width: 900px; margin: 60px auto 0 auto;">
-    <h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Teaching Experience</h2>
-    <ul style="line-height: 2;">
-        <li><strong>Teaching Assistant, Electrochemistry (CH117L)</strong> — Department of Chemistry, IIT Bombay (2016–2018) · 30/30 lab sessions conducted</li>
-        <li><strong>ICSE Chemistry (Grades 9 & 11)</strong> — Isha Home School, Coimbatore (2024)</li>
-        <li><strong>Science & Mathematics (secondary level)</strong> — Isha Samskriti, Coimbatore (2024–2025)</li>
-        <li><strong>Visiting Tutor in Chemistry</strong> — Dawn Breeze International School, Berhampur (2012–2013)</li>
-    </ul>
+<h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px;">Teaching Experience</h2>
+<ul style="line-height: 2;">
+<li><strong>Teaching Assistant, Electrochemistry (CH117L)</strong> — Department of Chemistry, IIT Bombay (2016–2018) · 30/30 lab sessions conducted</li>
+<li><strong>ICSE Chemistry (Grades 9 & 11)</strong> — Isha Home School, Coimbatore (2024)</li>
+<li><strong>Science & Mathematics (secondary level)</strong> — Isha Samskriti, Coimbatore (2024–2025)</li>
+<li><strong>Visiting Tutor in Chemistry</strong> — Dawn Breeze International School, Berhampur (2012–2013)</li>
+</ul>
 
-    <h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 40px;">Invited Lectures</h2>
-    <ul style="line-height: 2;">
-        <li>"Future of Chemistry: Exploration of the Possibilities" — Resource Person, Dept. of Chemistry, Khallikote Unitary University, Berhampur (Mar 2023)</li>
-        <li>"Insights into the Research Journey: from Pursuing a PhD to Expectations post-PhD" — Resource Person, Dept. of Chemistry, Khallikote Unitary University, Berhampur (Feb 2024)</li>
-    </ul>
+<h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 40px;">Invited Lectures</h2>
+<ul style="line-height: 2;">
+<li>"Future of Chemistry: Exploration of the Possibilities" — Resource Person, Dept. of Chemistry, Khallikote Unitary University, Berhampur (Mar 2023)</li>
+<li>"Insights into the Research Journey: from Pursuing a PhD to Expectations post-PhD" — Resource Person, Dept. of Chemistry, Khallikote Unitary University, Berhampur (Feb 2024)</li>
+</ul>
 
-    <h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 40px;">Mentorship</h2>
-    <ul style="line-height: 2;">
-        <li>Guided <strong>1 Ph.D., 2 M.Sc., and 1 B.Sc. researcher</strong> at IIT Bombay (2018–2020), including an INSPIRE Summer Fellow.</li>
-        <li>Trained <strong>3 Ph.D. students</strong> in FEG-TEM/SEM operation; managed instrument facilities (TEM, PXRD, FESEM-EDS) across 500+ logged hours.</li>
-    </ul>
+<h2 style="border-bottom: 2px solid #d4af37; padding-bottom: 10px; margin-top: 40px;">Mentorship</h2>
+<ul style="line-height: 2;">
+<li>Guided <strong>1 Ph.D., 2 M.Sc., and 1 B.Sc. researcher</strong> at IIT Bombay (2018–2020), including an INSPIRE Summer Fellow.</li>
+<li>Trained <strong>3 Ph.D. students</strong> in FEG-TEM/SEM operation; managed instrument facilities (TEM, PXRD, FESEM-EDS) across 500+ logged hours.</li>
+</ul>
 </div>

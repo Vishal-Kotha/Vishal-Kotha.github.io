@@ -15,8 +15,13 @@
     "status": "LIVE"
   },
   {
-    "task": "Mentorship Hub for Young Researchers",
+    "task": "Ask-a-Doubt Mentorship Channel",
     "priority": "medium",
-    "status": "PLANNED"
+    "status": "LIVE"
+  },
+  {
+    "task": "Interactive 3D Crystal Explorer",
+    "priority": "medium",
+    "status": "LIVE"
   }
 ]
