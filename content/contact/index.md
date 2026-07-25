@@ -8,7 +8,7 @@ layout: "page"
 <div class="contact-split">
     <div class="contact-text-area">
         <h2 style="color: #0a192f; margin-top: 0;">Open for Innovation</h2>
-        <p>Currently an <strong>Analytical Scientist at BPCL Corporate R&D</strong>, I welcome conversations on <strong>research collaborations, fellowships (MSCA / Humboldt), invited talks, and industrial partnerships</strong>.</p>
+        <p>Currently <strong>Scientist-B at BPCL Corporate R&D (CRDC)</strong>, I welcome conversations on <strong>research collaborations, fellowships (MSCA / Humboldt), invited talks, and industrial partnerships</strong>.</p>
         <p style="background: #fdf8ec; border-left: 4px solid #d4af37; padding: 12px 16px; border-radius: 0 6px 6px 0; font-size: 0.95rem;">
             🎓 <strong>Young researchers:</strong> stuck on a concept, a technique, or a career decision? Write to me — every serious doubt gets a reply. (Warm-up: try the <a href="/quiz/" style="color: #0a192f; font-weight: bold;">Materials Science Quiz</a>.)
         </p>
