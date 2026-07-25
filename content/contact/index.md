@@ -36,7 +36,7 @@ layout: "page"
 
 <form action="https://api.web3forms.com/submit" method="POST" style="background:#fff; border:1px solid #e0e0e0; border-radius:10px; padding:28px; box-shadow:0 4px 14px rgba(10,25,47,0.07);">
 <h3 style="color:#0a192f; margin-top:0;">Send a Message / Ask a Doubt</h3>
-<input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+<input type="hidden" name="access_key" value="d2e6e00e-47a7-4a19-8ff9-23c48382d4a5">
 <input type="hidden" name="subject" value="New message from vishalkotha.pages.dev">
 <input type="hidden" name="from_name" value="Vishal Kotha Portfolio">
 <input type="hidden" name="redirect" value="https://vishalkotha.pages.dev/contact/?sent=1">
