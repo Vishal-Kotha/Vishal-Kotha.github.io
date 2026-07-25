@@ -2,10 +2,32 @@
 
 **For the incoming agent (Kimi K3 Cowork).** Read this file completely before touching anything. It is the single source of truth for project state, conventions, and the road ahead. Update the "Progress Log" at the bottom whenever you complete work, so Vishal can audit progress across agents.
 
-- **Last updated:** 2026-07-22
+- **Last updated:** 2026-07-25
 - **Owner:** Dr. Vishal Kotha (vishalkotha1@gmail.com)
 - **Repo:** https://github.com/vishal-kotha/vishalkotha.git (branch: `main`)
-- **Live site:** https://vishalkotha.netlify.app (custom domain `vishalkotha.com` planned, not yet purchased)
+- **Live site:** https://vishalkotha.pages.dev (Cloudflare Pages; custom domain `vishalkotha.com` planned, not yet purchased)
+
+---
+
+## ⚡ CURRENT STATUS (2026-07-25) — supersedes stale items below
+
+Several items described further down as "pending/critical" are now RESOLVED. Read this first:
+
+- **All work is committed and pushed.** The "~150 uncommitted changes" era is over. `git status` is clean; `origin/main` has everything (blog, quiz, wow layer, CV sync, SEO, logo). The line-ending churn was fixed with `.gitattributes`; `public/` is now git-ignored (build output).
+- **HOSTING MIGRATED: Netlify → Cloudflare Pages.** Reason: Netlify's 2026 credit model (300 credits/mo, 15 per deploy ≈ 20 deploys/mo) throttled active development. Cloudflare Pages = unlimited bandwidth, free, auto-builds on push. **Therefore all Netlify items in Section 4 (AUTH_TOKEN, SITE_ID, form notifications) are MOOT.** There are no Netlify secrets to set anymore.
+- **CI pipeline changed accordingly.** `.github/workflows/site-sync.yml` no longer deploys anywhere — it only refreshes citation metrics weekly and commits them; Cloudflare rebuilds on that commit. It does NOT drain Netlify.
+- **Contact form migrated to Web3Forms** (access key live in `content/contact/index.md`). Netlify Forms no longer used. Submissions route straight to Vishal's email — no dashboard notification setting needed.
+- **New brand identity shipped:** perovskite unit-cell logo (`static/images/logo-mark.svg`) + crystal-tile favicon. Replaces the old `logo.png`.
+- **UX reverts (per owner):** the prev/next section bar and the condense-on-scroll header were tried and REMOVED. Do not reintroduce them without asking.
+- **Google Search Console:** verified for the pages.dev property (tag `dkQbZ3...` in `<head>`); sitemap submitted.
+- **baseURL is now `https://vishalkotha.pages.dev/`** in `hugo.yaml` (canonical/OG/schema/sitemap all follow it). One-line change when the custom domain is bought.
+
+### The ONE real open issue (as of this writing)
+Cloudflare is serving a **stale build** — the live pages.dev still shows old content (Netlify canonical, `logo.png`, the removed prev/next bar). GitHub `main` is correct, so this is a Cloudflare-side build/cache problem being diagnosed via the Cloudflare **Deployments** tab (check: latest deploy status, production branch = `main`, Git auto-deploy connected). Nothing else should be built until the live site matches `main`.
+
+### Still genuinely valid & pending
+- **CV PDF is still the Nov 2025 version** (`static/files/CV-Vishal_Kotha.pdf`). A newer markdown CV exists; regenerate the PDF (ATS-safe, single-column) and swap it.
+- **Next feature (agreed): the hybrid homepage redesign** — full-width cinematic layout (the `main` 800px cap is the "narrow/portrait" complaint), + a dedicated **Research Vision page in MSCA Excellence/Impact/Implementation language** (highest-leverage for the grant-committee audience).
 
 ---
 
@@ -174,6 +196,7 @@ hugo --minify && netlify deploy --prod --dir=public
 | 2026-07 | (prior) | Phase 1 blog+quiz, CV sync, BPCL role, fixed 404s | ✅ build |
 | 2026-07 | (prior) | Phase 2 auto-sync pipeline + full SEO/schema/OG | ✅ build |
 | 2026-07-22 | (prior) | Wow layer (3D crystal, motion, contact form), mobile overhaul, prev/next nav | ✅ build |
+| 2026-07-25 | (prior) | Committed+pushed all work; fixed Experience raw-HTML bug; reverted prev/next + header condense; new perovskite logo/favicon; MIGRATED Netlify→Cloudflare Pages; form→Web3Forms; baseURL→pages.dev | ✅ build; ⚠️ Cloudflare serving stale build (open) |
 | _add yours below_ | | | |
 
 ---
