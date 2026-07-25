@@ -96,16 +96,23 @@
             <span></span><span></span><span></span>
         </button>
 
-        {{ $sec := .Section }}
+        {{ $p := .RelPermalink }}
         <ul id="nav-menu">
-            <li><a href="/about" class="{{ if eq $sec "about" }}active{{ end }}">About</a></li>
-            <li><a href="/research-vision" class="nav-accent {{ if eq $sec "research-vision" }}active{{ end }}">Research Vision</a></li>
-            <li><a href="/research" class="{{ if eq $sec "research" }}active{{ end }}">Research</a></li>
-            <li><a href="/publications" class="{{ if eq $sec "publications" }}active{{ end }}">Publications</a></li>
-            <li><a href="/experience" class="{{ if eq $sec "experience" }}active{{ end }}">Experience</a></li>
-            <li><a href="/blog" class="{{ if eq $sec "blog" }}active{{ end }}">Blog</a></li>
-            <li><a href="/quiz" class="nav-accent {{ if eq $sec "quiz" }}active{{ end }}">Quiz 🧪</a></li>
-            <li><a href="/contact" class="{{ if eq $sec "contact" }}active{{ end }}">Contact</a></li>
+            <li><a href="/about" class="{{ if hasPrefix $p "/about/" }}active{{ end }}">About</a></li>
+            <li><a href="/research-vision" class="{{ if hasPrefix $p "/research-vision/" }}active{{ end }}">Research Vision</a></li>
+            <li><a href="/research" class="{{ if hasPrefix $p "/research/" }}active{{ end }}">Research</a></li>
+            <li><a href="/publications" class="{{ if hasPrefix $p "/publications/" }}active{{ end }}">Publications</a></li>
+            <li><a href="/experience" class="{{ if hasPrefix $p "/experience/" }}active{{ end }}">Experience</a></li>
+            <li><a href="/blog" class="{{ if hasPrefix $p "/blog/" }}active{{ end }}">Blog</a></li>
+            <li><a href="/quiz" class="{{ if hasPrefix $p "/quiz/" }}active{{ end }}">Quiz</a></li>
+            <li><a href="/contact" class="{{ if hasPrefix $p "/contact/" }}active{{ end }}">Contact</a></li>
+            <li class="has-dropdown">
+                <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="More sections">☰ More</button>
+                <ul class="dropdown-menu">
+                    <li><a href="/expertise" class="{{ if hasPrefix $p "/expertise/" }}active{{ end }}">Expertise</a></li>
+                    <li><a href="/gallery" class="{{ if hasPrefix $p "/gallery/" }}active{{ end }}">Gallery</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -133,6 +140,21 @@
                 btn.classList.remove('open');
                 btn.setAttribute('aria-expanded', 'false');
             }
+        });
+    })();
+
+    /* "More" dropdown toggle (click to open; closes on outside click) */
+    (function () {
+        var dd = document.querySelector('.has-dropdown');
+        if (!dd) return;
+        var toggle = dd.querySelector('.dropdown-toggle');
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            var open = dd.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+            if (!dd.contains(e.target)) { dd.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
         });
     })();
     </script>
@@ -174,12 +196,6 @@
                     <a href="https://www.linkedin.com/in/vishal-kotha" target="_blank">LinkedIn ↗</a>
                     <a href="https://scholar.google.com/citations?user=ryaF3dIAAAAJ" target="_blank">Google Scholar ↗</a>
                     <a href="https://orcid.org/0000-0002-1499-4646" target="_blank">ORCID ↗</a>
-                </div>
-                <h4 style="margin-top:18px;">Explore</h4>
-                <div class="social-links">
-                    <a href="/expertise">Expertise</a>
-                    <a href="/gallery">Gallery</a>
-                    <a href="/quiz">Science Quiz</a>
                 </div>
             </div>
 
