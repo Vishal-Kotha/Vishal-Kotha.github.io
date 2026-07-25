@@ -6,20 +6,47 @@ layout: "home"
 
 <div class="hero">
   <h1>Dr. Vishal Kotha</h1>
-  
+
   <p class="hero-subtitle">
-    Materials Scientist | Industrial R&D
+    Materials Scientist · Scientist-B, BPCL Corporate R&D
   </p>
-  
+
   <p class="hero-tagline">
-    Bridging <strong>Fundamental Spin-Chemistry</strong> with <strong>Scalable Energy Solutions</strong> for a sustainable future.
+    I design <strong>defect-engineered perovskite electrocatalysts</strong> for <strong>industrial green hydrogen</strong> — from the atomic scale to the plant floor.
   </p>
-  
-  <div class="hero-buttons">
-    <a href="/research/" class="btn-gold">Explore Portfolio</a>
-    <a href="/quiz/" class="btn-outline">Test Your Science IQ 🧪</a>
-    <a href="/files/CV-Vishal_Kotha.pdf" class="btn-outline">Download CV</a>
+
+  <div class="hero-metrics">
+    <span><strong>11</strong> Publications</span>
+    <span class="dot">·</span>
+    <span><strong>189</strong> Citations</span>
+    <span class="dot">·</span>
+    <span><strong>8</strong> h-index</span>
+    <span class="dot">·</span>
+    <span class="affil">IIT Bombay · Weizmann Institute · BPCL</span>
   </div>
+
+  <div class="hero-buttons">
+    <a href="/files/CV-Vishal_Kotha.pdf" class="btn-gold">Download CV</a>
+    <a href="/research-vision/" class="btn-outline">Research Vision</a>
+  </div>
+</div>
+
+<div class="audience-funnels">
+  <a href="/research-vision/" class="funnel-card">
+    <span class="funnel-tag">For Grant Reviewers</span>
+    <h3>Research Vision <span class="arrow">→</span></h3>
+    <p>Excellence, Impact & Implementation — my fellowship-framed research programme for green hydrogen.</p>
+  </a>
+  <a href="/research/" class="funnel-card">
+    <span class="funnel-tag">For Collaborators</span>
+    <h3>Research & Projects <span class="arrow">→</span></h3>
+    <p>Perovskite electrocatalysis, spin-selective chemistry, and industrial electrolyzer scale-up.</p>
+  </a>
+  <a href="/quiz/" class="funnel-card">
+    <span class="funnel-tag">For Students</span>
+    <h3>Start Here <span class="arrow">→</span></h3>
+    <p>Test your science with the quiz, read the blog, and send me any doubt — I answer every one.</p>
+  </a>
 </div>
 
 <div class="crystal-section">
