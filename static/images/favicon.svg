@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Dr. Vishal Kotha favicon">
+  <rect width="512" height="512" rx="112" fill="#0a192f"/>
+  <g fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M150 200 L330 200 L330 380 L150 380 Z"/>
+    <path d="M230 120 L410 120 L410 300 L330 300"/>
+    <path d="M150 200 L230 120"/>
+    <path d="M330 200 L410 120"/>
+    <path d="M330 380 L410 300"/>
+  </g>
+  <circle cx="280" cy="250" r="34" fill="#d4af37"/>
+</svg>

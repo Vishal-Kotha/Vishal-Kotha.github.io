@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Perovskite unit-cell mark">
+  <g fill="none" stroke="#0a192f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M35 45 L85 45 L85 95 L35 95 Z"/>
+    <path d="M57 25 L107 25 L107 75 L57 75"/>
+    <path d="M35 45 L57 25"/>
+    <path d="M85 45 L107 25"/>
+    <path d="M85 95 L107 75"/>
+  </g>
+  <g fill="#0a192f">
+    <circle cx="35" cy="45" r="6"/>
+    <circle cx="85" cy="45" r="6"/>
+    <circle cx="85" cy="95" r="6"/>
+    <circle cx="35" cy="95" r="6"/>
+    <circle cx="57" cy="25" r="6"/>
+    <circle cx="107" cy="25" r="6"/>
+    <circle cx="107" cy="75" r="6"/>
+  </g>
+  <circle cx="71" cy="60" r="9" fill="#d4af37" stroke="#0a192f" stroke-width="2"/>
+</svg>
