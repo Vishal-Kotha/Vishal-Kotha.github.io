@@ -1848,3 +1848,78 @@ nav a { font-size: 0.9rem; white-space: nowrap; }
     }
     .has-dropdown { border-bottom: 1px solid #f2f2f2; }
 }
+
+/* ============ CLASSIC / INSTITUTIONAL HEADER (MIT/Stanford-inspired) ============ */
+/* CRITICAL alignment fix: the global heading rule adds margin-top:1.5em to every nav <a>,
+   which pushed the brand and tabs off-centre. Kill it. */
+nav a { margin-top: 0 !important; }
+
+nav { height: 76px; }
+
+/* Brand lockup: perovskite mark · gold rule · serif wordmark + gold eyebrow */
+.nav-brand { gap: 14px; align-items: center; }
+.brand-logo { height: 44px; box-shadow: none !important; margin: 0 !important; border-radius: 0 !important; }
+.brand-divider {
+    display: inline-block;
+    width: 1px;
+    height: 38px;
+    background: linear-gradient(#d4af37, rgba(212,175,55,0.15));
+}
+.brand-lockup { display: flex; flex-direction: column; justify-content: center; line-height: 1.05; }
+.brand-text {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.34rem;
+    font-weight: 700;
+    color: #0a192f;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    margin: 0;
+}
+.brand-sub {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b8860b;
+    margin-top: 4px;
+}
+
+/* Classic tabs — desktop only (mobile keeps the readable hamburger menu) */
+@media (min-width: 901px) {
+    nav ul#nav-menu > li { margin-left: 26px; }
+    nav ul#nav-menu > li > a,
+    .dropdown-toggle {
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.77rem;
+        font-weight: 600;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+        color: #0a192f;
+        padding: 8px 0;
+        border-bottom: none !important;
+        background: none;
+    }
+    nav ul#nav-menu > li > a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #d4af37;
+        transition: width 0.28s cubic-bezier(0.16,1,0.3,1);
+    }
+    nav ul#nav-menu > li > a:hover,
+    .dropdown-toggle:hover { color: #b8860b; }
+    nav ul#nav-menu > li > a:hover::after,
+    nav ul#nav-menu > li > a.active::after { width: 100%; }
+    nav ul#nav-menu > li > a.active { color: #b8860b; }
+    .dropdown-toggle .caret { font-size: 0.65rem; margin-left: 2px; }
+}
+
+/* Hide the eyebrow subtitle on very small phones to keep the bar clean */
+@media (max-width: 480px) {
+    .brand-sub, .brand-divider { display: none; }
+}

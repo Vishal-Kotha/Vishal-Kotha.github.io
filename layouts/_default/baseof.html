@@ -89,7 +89,11 @@
     <nav>
         <a href="/" class="nav-brand">
             <img src="/images/logo-mark.svg" alt="Dr. Vishal Kotha home" class="brand-logo">
-            <span class="brand-text">Dr. Vishal Kotha</span>
+            <span class="brand-divider"></span>
+            <span class="brand-lockup">
+                <span class="brand-text">Dr. Vishal Kotha</span>
+                <span class="brand-sub">Materials Scientist</span>
+            </span>
         </a>
 
         <button id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
@@ -102,14 +106,14 @@
             <li><a href="/research-vision" class="{{ if hasPrefix $p "/research-vision/" }}active{{ end }}">Research Vision</a></li>
             <li><a href="/research" class="{{ if hasPrefix $p "/research/" }}active{{ end }}">Research</a></li>
             <li><a href="/publications" class="{{ if hasPrefix $p "/publications/" }}active{{ end }}">Publications</a></li>
+            <li><a href="/expertise" class="{{ if hasPrefix $p "/expertise/" }}active{{ end }}">Expertise</a></li>
             <li><a href="/experience" class="{{ if hasPrefix $p "/experience/" }}active{{ end }}">Experience</a></li>
-            <li><a href="/blog" class="{{ if hasPrefix $p "/blog/" }}active{{ end }}">Blog</a></li>
-            <li><a href="/quiz" class="{{ if hasPrefix $p "/quiz/" }}active{{ end }}">Quiz</a></li>
             <li><a href="/contact" class="{{ if hasPrefix $p "/contact/" }}active{{ end }}">Contact</a></li>
             <li class="has-dropdown">
-                <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="More sections">☰ More</button>
+                <button type="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="More sections">More <span class="caret">▾</span></button>
                 <ul class="dropdown-menu">
-                    <li><a href="/expertise" class="{{ if hasPrefix $p "/expertise/" }}active{{ end }}">Expertise</a></li>
+                    <li><a href="/blog" class="{{ if hasPrefix $p "/blog/" }}active{{ end }}">Blog</a></li>
+                    <li><a href="/quiz" class="{{ if hasPrefix $p "/quiz/" }}active{{ end }}">Science Quiz</a></li>
                     <li><a href="/gallery" class="{{ if hasPrefix $p "/gallery/" }}active{{ end }}">Gallery</a></li>
                 </ul>
             </li>
