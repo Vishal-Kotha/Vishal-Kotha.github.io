@@ -1,4 +1,4 @@
-baseURL: "https://vishalkotha.netlify.app/" # Swap to https://vishalkotha.com/ when the domain is purchased
+baseURL: "https://vishalkotha.pages.dev/" # Swap to https://vishalkotha.com/ when the custom domain is purchased
 languageCode: "en-us"
 title: "Dr. Vishal Kotha | Materials Scientist"
 theme: "PaperMod"

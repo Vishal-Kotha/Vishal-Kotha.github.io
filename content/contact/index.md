@@ -34,9 +34,13 @@ layout: "page"
 ✅ <strong>Message received!</strong> I read every message personally and will reply soon. Meanwhile, the <a href="/blog/" style="color:#0a192f; font-weight:bold;">blog</a> and <a href="/quiz/" style="color:#0a192f; font-weight:bold;">quiz</a> are open.
 </div>
 
-<form name="contact" method="POST" action="/contact/?sent=1" data-netlify="true" netlify-honeypot="bot-field" style="background:#fff; border:1px solid #e0e0e0; border-radius:10px; padding:28px; box-shadow:0 4px 14px rgba(10,25,47,0.07);">
+<form action="https://api.web3forms.com/submit" method="POST" style="background:#fff; border:1px solid #e0e0e0; border-radius:10px; padding:28px; box-shadow:0 4px 14px rgba(10,25,47,0.07);">
 <h3 style="color:#0a192f; margin-top:0;">Send a Message / Ask a Doubt</h3>
-<p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+<input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+<input type="hidden" name="subject" value="New message from vishalkotha.pages.dev">
+<input type="hidden" name="from_name" value="Vishal Kotha Portfolio">
+<input type="hidden" name="redirect" value="https://vishalkotha.pages.dev/contact/?sent=1">
+<input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
 <label style="display:block; font-size:0.85rem; font-weight:bold; color:#0a192f; margin-bottom:4px;">Name</label>
 <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; margin-bottom:14px; font-family:inherit; box-sizing:border-box;">
