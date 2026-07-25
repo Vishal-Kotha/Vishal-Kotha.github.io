@@ -8,7 +8,7 @@ menu:
     weight: 20
 ---
 
-<img src="/images/vishal-profile.jpg" class="profile-circle" alt="Dr. Vishal Kotha">
+<img src="/images/vishal-profile-new.jpg" class="profile-circle" alt="Dr. Vishal Kotha">
 
 I am a **Materials Scientist** and **Operational Strategist** with over 7 years of experience in bridging atomic-level design with industrial-scale energy solutions.
 

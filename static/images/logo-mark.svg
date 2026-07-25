@@ -1,19 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Perovskite unit-cell mark">
-  <g fill="none" stroke="#0a192f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Perovskite ABO3 unit cell — BO6 octahedron caged in a cube">
+  <!-- cube (A-site cage), subtle grey wireframe -->
+  <g fill="none" stroke="#b9c0cc" stroke-width="2" stroke-linejoin="round">
     <path d="M35 45 L85 45 L85 95 L35 95 Z"/>
-    <path d="M57 25 L107 25 L107 75 L57 75"/>
-    <path d="M35 45 L57 25"/>
-    <path d="M85 45 L107 25"/>
-    <path d="M85 95 L107 75"/>
+    <path d="M57 25 L107 25 L107 75 L57 75 Z"/>
+    <path d="M35 45 L57 25"/><path d="M85 45 L107 25"/><path d="M85 95 L107 75"/><path d="M35 95 L57 75"/>
   </g>
+  <!-- BO6 octahedron edges (navy) -->
+  <g fill="none" stroke="#0a192f" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M71 35 L60 70 M71 35 L96 60 M71 35 L82 50 M71 35 L46 60"/>
+    <path d="M71 85 L60 70 M71 85 L96 60 M71 85 L82 50 M71 85 L46 60"/>
+    <path d="M60 70 L96 60 M96 60 L82 50 M82 50 L46 60 M46 60 L60 70"/>
+  </g>
+  <!-- translucent octahedron faces for depth -->
+  <path d="M71 35 L96 60 L60 70 Z" fill="#0a192f" opacity="0.10"/>
+  <path d="M71 85 L96 60 L60 70 Z" fill="#0a192f" opacity="0.14"/>
+  <!-- A-site cations (cube corners), gold -->
+  <g fill="#d4af37">
+    <circle cx="35" cy="45" r="4"/><circle cx="85" cy="45" r="4"/><circle cx="85" cy="95" r="4"/><circle cx="35" cy="95" r="4"/>
+    <circle cx="57" cy="25" r="4"/><circle cx="107" cy="25" r="4"/><circle cx="107" cy="75" r="4"/><circle cx="57" cy="75" r="4"/>
+  </g>
+  <!-- O atoms at octahedron vertices, navy -->
   <g fill="#0a192f">
-    <circle cx="35" cy="45" r="6"/>
-    <circle cx="85" cy="45" r="6"/>
-    <circle cx="85" cy="95" r="6"/>
-    <circle cx="35" cy="95" r="6"/>
-    <circle cx="57" cy="25" r="6"/>
-    <circle cx="107" cy="25" r="6"/>
-    <circle cx="107" cy="75" r="6"/>
+    <circle cx="71" cy="35" r="3"/><circle cx="82" cy="50" r="3"/><circle cx="96" cy="60" r="3"/>
+    <circle cx="71" cy="85" r="3"/><circle cx="60" cy="70" r="3"/><circle cx="46" cy="60" r="3"/>
   </g>
-  <circle cx="71" cy="60" r="9" fill="#d4af37" stroke="#0a192f" stroke-width="2"/>
+  <!-- B-site cation at body centre, gold -->
+  <circle cx="71" cy="60" r="6" fill="#d4af37" stroke="#0a192f" stroke-width="1.6"/>
 </svg>

@@ -1,11 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Dr. Vishal Kotha favicon">
-  <rect width="512" height="512" rx="112" fill="#0a192f"/>
-  <g fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round" stroke-linecap="round">
-    <path d="M150 200 L330 200 L330 380 L150 380 Z"/>
-    <path d="M230 120 L410 120 L410 300 L330 300"/>
-    <path d="M150 200 L230 120"/>
-    <path d="M330 200 L410 120"/>
-    <path d="M330 380 L410 300"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512" role="img" aria-label="Dr. Vishal Kotha — perovskite favicon">
+  <rect width="120" height="120" rx="26" fill="#0a192f"/>
+  <!-- cube cage, faint -->
+  <g fill="none" stroke="#5b6b86" stroke-width="2.4" stroke-linejoin="round">
+    <path d="M33 47 L83 47 L83 97 L33 97 Z"/>
+    <path d="M55 27 L105 27 L105 77 L55 77 Z"/>
+    <path d="M33 47 L55 27"/><path d="M83 47 L105 27"/><path d="M83 97 L105 77"/><path d="M33 97 L55 77"/>
   </g>
-  <circle cx="280" cy="250" r="34" fill="#d4af37"/>
+  <!-- octahedron edges, white/gold -->
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M69 37 L58 72 M69 37 L94 62 M69 37 L80 52 M69 37 L44 62"/>
+    <path d="M69 87 L58 72 M69 87 L94 62 M69 87 L80 52 M69 87 L44 62"/>
+    <path d="M58 72 L94 62 M94 62 L80 52 M80 52 L44 62 M44 62 L58 72"/>
+  </g>
+  <path d="M69 37 L94 62 L58 72 Z" fill="#ffffff" opacity="0.12"/>
+  <g fill="#d4af37"><circle cx="33" cy="47" r="4.2"/><circle cx="83" cy="47" r="4.2"/><circle cx="83" cy="97" r="4.2"/><circle cx="33" cy="97" r="4.2"/><circle cx="55" cy="27" r="4.2"/><circle cx="105" cy="27" r="4.2"/><circle cx="105" cy="77" r="4.2"/><circle cx="55" cy="77" r="4.2"/></g>
+  <circle cx="69" cy="62" r="7" fill="#d4af37" stroke="#0a192f" stroke-width="1.6"/>
 </svg>
