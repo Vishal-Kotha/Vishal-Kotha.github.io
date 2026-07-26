@@ -13,7 +13,7 @@ Science is not just about data; it is about people, teaching, and exploration.
         </div>
         <div class="gallery-content">
             <span class="gallery-role">Invited Speaker</span>
-            <span class="gallery-desc">Delivering a lecture on "Future Materials" to PG students at Khallikote Unitary University.</span>
+            <span class="gallery-desc">Invited lecture on "Future Materials" to postgraduate students — Khallikote University, Berhampur, 2023.</span>
         </div>
     </article>
     <article class="gallery-card">
@@ -58,7 +58,7 @@ Science is not just about data; it is about people, teaching, and exploration.
         </div>
         <div class="gallery-content">
             <span class="gallery-role">Global Research</span>
-            <span class="gallery-desc">Beginning my Postdoctoral journey at Weizmann Institute, Israel.</span>
+            <span class="gallery-desc">Beginning my postdoctoral research at the Weizmann Institute of Science, Rehovot, Israel — 2023.</span>
         </div>
     </article>
     <article class="gallery-card">
@@ -67,7 +67,7 @@ Science is not just about data; it is about people, teaching, and exploration.
         </div>
         <div class="gallery-content">
             <span class="gallery-role">Doctoral Convocation</span>
-            <span class="gallery-desc">Receiving Ph.D. degree from Prof. M. Ravikanth (HOD Chemistry, IITB).</span>
+            <span class="gallery-desc">Receiving my Ph.D. from Prof. M. Ravikanth (Head, Chemistry) — IIT Bombay, Mumbai, 2022.</span>
         </div>
     </article>
     <article class="gallery-card">
@@ -76,7 +76,7 @@ Science is not just about data; it is about people, teaching, and exploration.
         </div>
         <div class="gallery-content">
             <span class="gallery-role">Roots</span>
-            <span class="gallery-desc">Department of Chemistry, Pondicherry University.</span>
+            <span class="gallery-desc">Where it began — Department of Chemistry, Pondicherry University (M.Sc., 2014–2016).</span>
         </div>
     </article>
 </div>

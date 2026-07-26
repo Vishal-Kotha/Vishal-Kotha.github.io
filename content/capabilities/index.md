@@ -116,10 +116,6 @@ Beyond the bench, I bring operational leadership to R&D teams.
         <h4 style="color: #0a192f; margin-top:0;">Collaboration</h4>
         <p style="font-size: 0.9rem; color: #666;">Executed cross-border research (India-Israel) on chiral spintronics.</p>
     </article>
-    <article class="project-card">
-        <h4 style="color: #0a192f; margin-top:0;">Mechanochemistry</h4>
-        <p style="font-size: 0.9rem; color: #666;">Shear-induced exfoliation and nucleation of nanomaterials for scalable production.</p>
-    </article>
 </div>
 
 [View Research Projects →](/research/)
