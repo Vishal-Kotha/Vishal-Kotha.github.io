@@ -1,5 +1,6 @@
 ---
 title: "Why One Crystal Structure Quietly Runs the Energy Revolution"
+categories: ["Perovskite Primer"]
 date: 2026-07-19
 description: "Perovskites power solar cells, batteries, and catalysts alike. The secret is a structure so tolerant of imperfection that chemists can tune it like an instrument."
 tags: ["Perovskites", "Energy Materials", "Explainer"]

@@ -1,5 +1,6 @@
 ---
 title: "Launching the Materials Science Quiz — How Sharp Is Your Science?"
+categories: ["News"]
 date: 2026-07-05
 description: "A fast, free quiz on perovskites, green hydrogen, and energy materials. Ten questions, instant explanations, no sign-up. Can you score Perovskite Pro?"
 tags: ["Quiz", "Announcement", "Learning"]

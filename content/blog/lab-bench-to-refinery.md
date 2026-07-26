@@ -1,5 +1,6 @@
 ---
 title: "From Milligrams to Kilotonnes: What Industry Teaches a Scientist"
+categories: ["Industry Notebook"]
 date: 2026-07-12
 description: "Moving from academic research to industrial R&D changes how you think about science. Notes from the transition — for every researcher wondering whether to make the jump."
 tags: ["Industry", "Career", "R&D"]

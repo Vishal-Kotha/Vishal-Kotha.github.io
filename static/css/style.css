@@ -1935,3 +1935,10 @@ nav { height: 76px; }
 @media (max-width: 700px) {
     .mobility-arrow { transform: rotate(90deg); justify-content: center; width: 100%; height: 24px; }
 }
+
+/* ============ BLOG SERIES FILTER + CATEGORY BADGES ============ */
+.blog-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.blog-filter-btn { font-family: 'Roboto', sans-serif; font-size: 0.82rem; font-weight: 600; padding: 7px 15px; border: 1.5px solid #dcdcdc; background: #fafafa; color: #0a192f; border-radius: 30px; cursor: pointer; transition: all 0.15s ease; }
+.blog-filter-btn:hover { border-color: #d4af37; }
+.blog-filter-btn.selected { background: #0a192f; color: #fff; border-color: #0a192f; }
+.blog-cat-badge { display: inline-block; background: #fdf8ec; color: #b8860b; font-weight: 700; padding: 2px 9px; border-radius: 10px; font-size: 0.7rem; margin-right: 8px; text-transform: uppercase; letter-spacing: 0.5px; }

@@ -5,13 +5,22 @@
     <div style="margin-bottom: 10px; max-width: 750px;">
         {{ .Content }}
     </div>
-    <p style="margin-bottom: 40px;">
+    <p style="margin-bottom: 24px;">
         <a href="{{ "blog/index.xml" | relURL }}" style="color: #d4af37; font-weight: bold; font-size: 0.9rem; text-decoration: none;">📡 Subscribe via RSS</a>
     </p>
 
-    <div class="project-grid">
+    {{/* Series/category filter */}}
+    <div class="blog-filter" id="blog-filter">
+        <button class="blog-filter-btn selected" data-cat="all">All Posts</button>
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+        <button class="blog-filter-btn" data-cat="{{ $name | urlize }}">{{ $name }} ({{ len $taxonomy.Pages }})</button>
+        {{ end }}
+    </div>
+
+    <div class="project-grid" id="blog-grid">
         {{ range .Pages.ByDate.Reverse }}
-        <article class="project-card">
+        {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
+        <article class="project-card blog-post-card" data-cat="{{ $cat | urlize }}">
 
             {{ if .Params.image }}
             <a href="{{ .Permalink }}">
@@ -19,7 +28,8 @@
             </a>
             {{ end }}
 
-            <p style="font-size: 0.8rem; color: #888; margin: 15px 0 5px 0; font-family: 'Roboto', sans-serif;">
+            <p style="font-size: 0.8rem; color: #888; margin: 12px 0 8px 0; font-family: 'Roboto', sans-serif;">
+                {{ with $cat }}<span class="blog-cat-badge">{{ . }}</span>{{ end }}
                 {{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read
             </p>
 
@@ -42,4 +52,21 @@
     </div>
 
 </div>
+
+<script>
+(function () {
+    var btns = document.querySelectorAll('.blog-filter-btn');
+    var cards = document.querySelectorAll('.blog-post-card');
+    btns.forEach(function (b) {
+        b.addEventListener('click', function () {
+            btns.forEach(function (x) { x.classList.remove('selected'); });
+            b.classList.add('selected');
+            var cat = b.getAttribute('data-cat');
+            cards.forEach(function (c) {
+                c.style.display = (cat === 'all' || c.getAttribute('data-cat') === cat) ? '' : 'none';
+            });
+        });
+    });
+})();
+</script>
 {{ end }}
