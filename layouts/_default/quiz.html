@@ -26,13 +26,19 @@
         .quiz-cta.gold { background: #d4af37; color: #0a192f; }
         .quiz-cta.navy { background: #0a192f; color: #fff; }
         .quiz-cta.outline { border: 2px solid #0a192f; color: #0a192f; }
+        .quiz-topics { display: flex; flex-wrap: wrap; gap: 10px; }
+        .quiz-topic { font-family: 'Roboto', sans-serif; font-size: 0.85rem; font-weight: 600; padding: 8px 16px; border: 1.5px solid #dcdcdc; background: #fafafa; color: #0a192f; border-radius: 30px; cursor: pointer; transition: all 0.15s ease; }
+        .quiz-topic:hover { border-color: #d4af37; }
+        .quiz-topic.selected { background: #0a192f; color: #fff; border-color: #0a192f; }
         @media (prefers-color-scheme: dark) { .quiz-question { color: inherit; } }
     </style>
 
     <div class="quiz-shell">
         <div id="quiz-start">
-            <p style="font-size:1.05rem;"><strong>10 randomized questions</strong> on perovskites, green hydrogen, batteries, and the tools of materials science. Instant explanations for every answer — right or wrong, you leave knowing more.</p>
-            <button class="quiz-next" style="display:inline-block;" onclick="startQuiz()">🚀 Start the Quiz</button>
+            <p style="font-size:1.05rem;"><strong>10 randomized questions</strong> from a bank of 50+ on perovskites, electrocatalysis, green hydrogen, batteries, and characterization. Instant explanations for every answer — right or wrong, you leave knowing more.</p>
+            <p style="font-weight:700; color:#0a192f; margin:22px 0 10px 0; font-family:'Roboto',sans-serif;">Choose your topic:</p>
+            <div id="quiz-topics" class="quiz-topics"></div>
+            <button class="quiz-next" style="display:inline-block; margin-top:20px;" onclick="startQuiz()">🚀 Start the Quiz</button>
         </div>
 
         <div id="quiz-play" style="display:none;">
@@ -52,6 +58,7 @@
             <a href="/contact/" class="quiz-cta navy">Ask Me a Doubt</a>
             <a href="javascript:void(0)" class="quiz-cta gold" onclick="shareScore()" id="quiz-share">Copy My Score 📋</a>
             <a href="javascript:void(0)" class="quiz-cta outline" onclick="startQuiz()">Play Again ↺</a>
+            <a href="javascript:void(0)" class="quiz-cta outline" onclick="backToTopics()">Change Topic</a>
             <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">New random questions every round.</p>
         </div>
     </div>
@@ -59,8 +66,24 @@
     <script>
     (function() {
         let bank = [], round = [], idx = 0, score = 0;
+        let selectedCat = 'All';
         const QUESTIONS_PER_ROUND = 10;
         const diffColors = { easy: '#2ed573', medium: '#ffa502', hard: '#ff4757' };
+
+        function buildTopics() {
+            var cats = ['All'].concat(bank.map(function (q) { return q.cat; }).filter(function (c, i, a) { return c && a.indexOf(c) === i; }));
+            var box = document.getElementById('quiz-topics');
+            if (!box) return;
+            box.innerHTML = '';
+            cats.forEach(function (c) {
+                var b = document.createElement('button');
+                b.className = 'quiz-topic' + (c === selectedCat ? ' selected' : '');
+                var n = c === 'All' ? bank.length : bank.filter(function (q) { return q.cat === c; }).length;
+                b.textContent = (c === 'All' ? 'All Topics' : c) + ' (' + n + ')';
+                b.onclick = function () { selectedCat = c; buildTopics(); };
+                box.appendChild(b);
+            });
+        }
 
         function shuffle(a) {
             for (let i = a.length - 1; i > 0; i--) {
@@ -72,7 +95,7 @@
 
         fetch('/data/quiz.json')
             .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-            .then(data => { bank = data; })
+            .then(data => { bank = data; buildTopics(); })
             .catch(() => {
                 document.getElementById('quiz-start').innerHTML =
                     '<p>⚠️ The quiz could not load. Please refresh the page or <a href="/contact/">let me know</a>.</p>';
@@ -80,7 +103,8 @@
 
         window.startQuiz = function() {
             if (!bank.length) return;
-            round = shuffle([...bank]).slice(0, QUESTIONS_PER_ROUND).map(q => {
+            var pool = (selectedCat === 'All') ? bank : bank.filter(function (q) { return q.cat === selectedCat; });
+            round = shuffle([...pool]).slice(0, QUESTIONS_PER_ROUND).map(q => {
                 const correctText = q.options[q.answer];
                 const opts = shuffle([...q.options]);
                 return { ...q, opts: opts, correct: opts.indexOf(correctText) };
@@ -95,7 +119,7 @@
         function renderQuestion() {
             const q = round[idx];
             document.getElementById('quiz-bar').style.width = ((idx) / round.length * 100) + '%';
-            document.getElementById('quiz-num').textContent = 'Question ' + (idx + 1) + ' of ' + round.length;
+            document.getElementById('quiz-num').textContent = (q.cat ? q.cat + '  ·  ' : '') + 'Question ' + (idx + 1) + ' of ' + round.length;
             const diff = document.getElementById('quiz-diff');
             diff.textContent = q.difficulty.toUpperCase();
             diff.style.background = diffColors[q.difficulty] || '#888';
@@ -159,6 +183,13 @@
                 el.textContent = 'Copied! ✔';
                 setTimeout(() => { el.textContent = 'Copy My Score 📋'; }, 2000);
             });
+        };
+
+        window.backToTopics = function() {
+            document.getElementById('quiz-end').style.display = 'none';
+            document.getElementById('quiz-play').style.display = 'none';
+            document.getElementById('quiz-start').style.display = 'block';
+            buildTopics();
         };
     })();
     </script>

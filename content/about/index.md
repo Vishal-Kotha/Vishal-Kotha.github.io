@@ -48,8 +48,8 @@ I discovered that the rigorous discipline required to **synthesize phase-pure $L
 <div class="gallery-grid" style="margin-top: 20px;">
     <article class="gallery-card">
         <div class="gallery-img-container">
-            <a href="/images/vishal-cleanroom.jpg" class="lightbox-trigger" data-caption="<strong>Clean Room Operations:</strong> Adhering to strict ISO safety protocols while fabricating nanodevices via EBL.">
-                <img src="/images/vishal-cleanroom.jpg" class="gallery-img" alt="Clean Room">
+            <a href="/images/vishal-cleanroom-highSize.jpg" class="lightbox-trigger" data-caption="<strong>Clean Room Operations:</strong> Adhering to strict ISO safety protocols while fabricating nanodevices via EBL.">
+                <img src="/images/vishal-cleanroom-highSize.jpg" class="gallery-img" alt="Clean Room">
             </a>
         </div>
         <div class="gallery-content">

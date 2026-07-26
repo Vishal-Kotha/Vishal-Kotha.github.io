@@ -1,107 +1,61 @@
 [
-  {
-    "q": "What is the general chemical formula of a perovskite?",
-    "options": ["ABX₃", "AB₂X₄", "A₂BX₆", "ABX₂"],
-    "answer": 0,
-    "difficulty": "easy",
-    "explain": "Perovskites follow ABX₃: a large A-site cation, a smaller B-site cation inside an octahedron of X anions (usually oxygen or a halide). This simple formula hides enormous chemical flexibility."
-  },
-  {
-    "q": "The Goldschmidt tolerance factor t ≈ 1 indicates what about a perovskite?",
-    "options": ["An ideal cubic structure is likely stable", "The material must be ferroelectric", "The lattice will collapse", "The B-site must be vacant"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "t = (r_A + r_X) / √2(r_B + r_X). Near t = 1, the ions pack into the ideal cubic perovskite. Between ~0.8–1.0 distorted variants form — and those distortions are themselves a powerful design tool."
-  },
-  {
-    "q": "During discharge of a zinc–air battery, which reaction occurs at the air cathode?",
-    "options": ["Oxygen reduction reaction (ORR)", "Oxygen evolution reaction (OER)", "Hydrogen evolution reaction (HER)", "Zinc dissolution"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "On discharge, atmospheric O₂ is reduced at the air cathode (ORR) while zinc oxidizes at the anode. On charge the cathode reverses to OER — which is why bifunctional catalysts like doped perovskites are so valuable."
-  },
-  {
-    "q": "What makes hydrogen 'green'?",
-    "options": ["It is produced by water electrolysis powered by renewable electricity", "It is stored in green pressurized cylinders", "It comes from natural gas with carbon capture", "It is mixed with biogas"],
-    "answer": 0,
-    "difficulty": "easy",
-    "explain": "Colour labels track the production route: green = renewable-powered electrolysis, grey = steam methane reforming without capture, blue = fossil-based with carbon capture. Only green hydrogen is near-zero carbon at source."
-  },
-  {
-    "q": "The minimum thermodynamic voltage required to split water into H₂ and O₂ is:",
-    "options": ["1.23 V", "0.59 V", "2.06 V", "3.00 V"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "ΔG = 237 kJ/mol for water splitting gives E = ΔG/nF = 1.23 V at 25 °C. Real electrolyzers need more — the extra voltage is the 'overpotential', and reducing it is the central mission of electrocatalysis."
-  },
-  {
-    "q": "In electrochemistry, 'overpotential' refers to:",
-    "options": ["Extra voltage beyond the thermodynamic value needed to drive a reaction at a useful rate", "The maximum voltage a battery can deliver", "Voltage lost to wiring resistance only", "The open-circuit voltage of a cell"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "Kinetics charge a toll: sluggish electron transfer and gas evolution demand voltage beyond the thermodynamic 1.23 V (for water splitting). A great catalyst is one that shrinks this toll."
-  },
-  {
-    "q": "The CISS effect — central to chiral electrocatalysis — stands for:",
-    "options": ["Chiral-Induced Spin Selectivity", "Charge-Induced Surface Splitting", "Catalytic Ion Site Substitution", "Chemically Induced Spontaneous Symmetry"],
-    "answer": 0,
-    "difficulty": "hard",
-    "explain": "Chiral molecules and surfaces preferentially transmit electrons of one spin orientation. In water splitting, spin-polarized electrons favour the desired O₂ (triplet) pathway — boosting efficiency and suppressing side products like H₂O₂."
-  },
-  {
-    "q": "X-ray diffraction (XRD) identifies crystal structures using which law?",
-    "options": ["Bragg's law: nλ = 2d·sinθ", "Beer–Lambert law", "Fick's law", "Ohm's law"],
-    "answer": 0,
-    "difficulty": "easy",
-    "explain": "X-rays reflecting off parallel atomic planes interfere constructively when nλ = 2d·sinθ. The resulting peak pattern is a fingerprint of the lattice — the first thing a materials scientist checks after synthesis."
-  },
-  {
-    "q": "Oxygen vacancies in perovskite oxides typically:",
-    "options": ["Can enhance catalytic activity and ionic conductivity", "Always destroy the material", "Have no effect on properties", "Only change the colour"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "Vacancies alter the B-site oxidation state and create active surface sites for oxygen chemistry. Deliberate defect engineering — imperfection by design — is how modern perovskite catalysts are tuned."
-  },
-  {
-    "q": "Which of these is NOT a perovskite?",
-    "options": ["Rutile TiO₂", "SrTiO₃", "BaTiO₃", "LaMnO₃"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "Rutile TiO₂ has formula AX₂ with a different octahedral network. SrTiO₃, BaTiO₃, and LaMnO₃ are all classic ABO₃ perovskites — spanning dielectrics, ferroelectrics, and magnetism in one structural family."
-  },
-  {
-    "q": "The key difference between SEM and TEM microscopy is:",
-    "options": ["TEM transmits electrons through an ultra-thin sample, achieving far higher resolution", "SEM uses light instead of electrons", "TEM only works on liquids", "SEM requires no vacuum"],
-    "answer": 0,
-    "difficulty": "easy",
-    "explain": "SEM scans a surface with a focused beam (topography, ~nm resolution); TEM shoots electrons through a sample thinned to <100 nm, resolving atomic columns. Choosing between them is choosing between skin and skeleton."
-  },
-  {
-    "q": "In ABO₃ perovskite electrocatalysts, which site usually governs catalytic activity?",
-    "options": ["The B-site transition metal", "The A-site alkaline earth", "The oxygen alone", "Neither — activity is random"],
-    "answer": 0,
-    "difficulty": "hard",
-    "explain": "The B-site transition metal's d-electron configuration (e.g., the eg occupancy descriptor) largely sets how reaction intermediates bind. A-site substitution is often used indirectly — to tune the B-site's oxidation state."
-  },
-  {
-    "q": "DFT, the workhorse of computational materials science, stands for:",
-    "options": ["Density Functional Theory", "Direct Fourier Transform", "Dynamic Field Testing", "Differential Flow Thermodynamics"],
-    "answer": 0,
-    "difficulty": "easy",
-    "explain": "DFT computes a material's electronic structure from its electron density rather than the many-body wavefunction — making quantum mechanics tractable enough to screen thousands of candidate materials before anyone enters a lab."
-  },
-  {
-    "q": "'Grey' hydrogen is produced by:",
-    "options": ["Steam methane reforming without carbon capture", "Electrolysis with solar power", "Splitting water with nuclear heat", "Fermentation of biomass"],
-    "answer": 0,
-    "difficulty": "medium",
-    "explain": "Over 90% of today's hydrogen is grey: CH₄ + H₂O → CO + 3H₂, emitting ~9–10 kg CO₂ per kg H₂. Replacing it with green hydrogen is one of the largest decarbonization opportunities on Earth."
-  },
-  {
-    "q": "Why do zinc–air batteries offer such high theoretical energy density?",
-    "options": ["One reactant (oxygen) comes free from the surrounding air", "Zinc is the lightest metal", "They operate at very high voltage", "They contain no electrolyte"],
-    "answer": 0,
-    "difficulty": "hard",
-    "explain": "The cathode's active material — oxygen — isn't carried inside the cell; it's breathed from air. Removing that mass from the package gives zinc–air a theoretical energy density (~1,086 Wh/kg) several times that of Li-ion."
-  }
+  { "cat": "Perovskites", "q": "What is the general chemical formula of a perovskite?", "options": ["ABX₃", "AB₂X₄", "A₂BX₆", "ABX₂"], "answer": 0, "difficulty": "easy", "explain": "Perovskites follow ABX₃: a large A-site cation, a smaller B-site cation inside an octahedron of X anions (usually oxygen or a halide). This simple formula hides enormous chemical flexibility." },
+  { "cat": "Perovskites", "q": "The Goldschmidt tolerance factor t ≈ 1 indicates what about a perovskite?", "options": ["An ideal cubic structure is likely stable", "The material must be ferroelectric", "The lattice will collapse", "The B-site must be vacant"], "answer": 0, "difficulty": "medium", "explain": "t = (r_A + r_X) / √2(r_B + r_X). Near t = 1, the ions pack into the ideal cubic perovskite. Between ~0.8–1.0 distorted variants form — and those distortions are themselves a design tool." },
+  { "cat": "Perovskites", "q": "Oxygen vacancies in perovskite oxides typically:", "options": ["Can enhance catalytic activity and ionic conductivity", "Always destroy the material", "Have no effect on properties", "Only change the colour"], "answer": 0, "difficulty": "medium", "explain": "Vacancies alter the B-site oxidation state and create active surface sites for oxygen chemistry. Deliberate defect engineering — imperfection by design — is how modern perovskite catalysts are tuned." },
+  { "cat": "Perovskites", "q": "Which of these is NOT a perovskite?", "options": ["Rutile TiO₂", "SrTiO₃", "BaTiO₃", "LaMnO₃"], "answer": 0, "difficulty": "medium", "explain": "Rutile TiO₂ has formula AX₂ with a different octahedral network. SrTiO₃, BaTiO₃, and LaMnO₃ are all classic ABO₃ perovskites — spanning dielectrics, ferroelectrics, and magnetism in one structural family." },
+  { "cat": "Perovskites", "q": "In ABO₃ perovskite electrocatalysts, which site usually governs catalytic activity?", "options": ["The B-site transition metal", "The A-site alkaline earth", "The oxygen alone", "Neither — activity is random"], "answer": 0, "difficulty": "hard", "explain": "The B-site transition metal's d-electron configuration (e.g. the e_g occupancy descriptor) largely sets how reaction intermediates bind. A-site substitution is often used indirectly, to tune the B-site's oxidation state." },
+  { "cat": "Perovskites", "q": "In a cubic ABO₃ perovskite, what is the coordination number of the B-site cation?", "options": ["6 (octahedral)", "4 (tetrahedral)", "12 (cuboctahedral)", "8 (cubic)"], "answer": 0, "difficulty": "medium", "explain": "The B cation sits at the centre of a BO₆ octahedron — 6-fold coordination. The A cation, by contrast, is 12-coordinate, nestled between eight octahedra." },
+  { "cat": "Perovskites", "q": "In LaMnO₃, which element occupies the A-site?", "options": ["La (lanthanum)", "Mn (manganese)", "O (oxygen)", "H (hydrogen)"], "answer": 0, "difficulty": "easy", "explain": "Lanthanum is the large A-site cation; manganese is the catalytically active B-site cation inside the oxygen octahedron. Substituting K⁺ for La³⁺ is exactly the defect trick behind stable zinc–air catalysts." },
+  { "cat": "Perovskites", "q": "The A-site cation in an ideal perovskite is coordinated by how many oxygen atoms?", "options": ["12", "6", "8", "4"], "answer": 0, "difficulty": "hard", "explain": "The A-site sits in a large cuboctahedral cavity surrounded by 12 oxygens. Its size relative to the B–O framework is precisely what the tolerance factor captures." },
+  { "cat": "Perovskites", "q": "Halide perovskites for solar cells (e.g. MAPbI₃) replace oxygen with:", "options": ["A halide such as iodide", "Nitrogen", "Sulfur", "Carbon"], "answer": 0, "difficulty": "medium", "explain": "In halide perovskites the X-site is a halide (I⁻, Br⁻, Cl⁻) and A is often an organic cation like methylammonium. They deliver record photovoltaic efficiencies but face stability challenges." },
+
+  { "cat": "Electrocatalysis", "q": "In electrochemistry, 'overpotential' refers to:", "options": ["Extra voltage beyond the thermodynamic value needed to drive a reaction at a useful rate", "The maximum voltage a battery can deliver", "Voltage lost to wiring resistance only", "The open-circuit voltage of a cell"], "answer": 0, "difficulty": "medium", "explain": "Kinetics charge a toll: sluggish electron transfer and gas evolution demand voltage beyond the thermodynamic minimum. A great catalyst shrinks this overpotential." },
+  { "cat": "Electrocatalysis", "q": "The CISS effect — central to chiral electrocatalysis — stands for:", "options": ["Chiral-Induced Spin Selectivity", "Charge-Induced Surface Splitting", "Catalytic Ion Site Substitution", "Chemically Induced Spontaneous Symmetry"], "answer": 0, "difficulty": "hard", "explain": "Chiral molecules and surfaces preferentially transmit electrons of one spin. In water splitting, spin-polarised electrons favour the desired triplet O₂ pathway — boosting efficiency and suppressing H₂O₂." },
+  { "cat": "Electrocatalysis", "q": "During discharge of a zinc–air battery, which reaction occurs at the air cathode?", "options": ["Oxygen reduction reaction (ORR)", "Oxygen evolution reaction (OER)", "Hydrogen evolution reaction (HER)", "Zinc dissolution"], "answer": 0, "difficulty": "medium", "explain": "On discharge, atmospheric O₂ is reduced at the air cathode (ORR) while zinc oxidises at the anode. On charge the cathode reverses to OER — which is why bifunctional catalysts are so valuable." },
+  { "cat": "Electrocatalysis", "q": "What does OER stand for?", "options": ["Oxygen Evolution Reaction", "Optimal Electrode Resistance", "Organic Electron Relay", "Oxide Etching Rate"], "answer": 0, "difficulty": "easy", "explain": "The oxygen evolution reaction (2H₂O → O₂ + 4H⁺ + 4e⁻) is the sluggish, four-electron anode half-reaction of water splitting — the main efficiency bottleneck in electrolysers." },
+  { "cat": "Electrocatalysis", "q": "A 'bifunctional' oxygen electrocatalyst is one that can catalyse:", "options": ["Both the ORR and the OER", "Only the HER", "Two different metals simultaneously", "Both oxidation of water and of hydrogen"], "answer": 0, "difficulty": "medium", "explain": "Bifunctional catalysts drive both oxygen reduction (discharge) and oxygen evolution (charge), enabling rechargeable metal–air batteries and reversible fuel cells. K-substituted LaMnO₃ is a strong example." },
+  { "cat": "Electrocatalysis", "q": "A lower overpotential for a given current density means the catalyst is:", "options": ["More active / more efficient", "Less stable", "More expensive", "Less selective"], "answer": 0, "difficulty": "easy", "explain": "Less wasted voltage to reach the same rate = a more active catalyst. Reported at a benchmark (often 10 mA/cm²), overpotential is the headline metric for comparing electrocatalysts." },
+  { "cat": "Electrocatalysis", "q": "The Tafel slope of an electrocatalyst provides information about the:", "options": ["Rate-determining step and reaction mechanism", "Colour of the electrode", "Melting point of the catalyst", "Density of the electrolyte"], "answer": 0, "difficulty": "hard", "explain": "The Tafel slope (mV/decade) links overpotential to log(current). Its value hints at which elementary step limits the rate — a key diagnostic when designing better catalysts." },
+  { "cat": "Electrocatalysis", "q": "In alkaline media, the hydrogen evolution reaction (HER) consumes:", "options": ["Water, producing H₂ and OH⁻", "Only protons", "Dissolved oxygen", "Chloride ions"], "answer": 0, "difficulty": "medium", "explain": "In alkaline HER, 2H₂O + 2e⁻ → H₂ + 2OH⁻. The extra water-dissociation step makes alkaline HER kinetically slower than in acid — a central challenge for cheap, non-precious electrolysers." },
+  { "cat": "Electrocatalysis", "q": "The e_g orbital occupancy descriptor predicts perovskite oxygen-electrocatalysis activity is optimal near:", "options": ["An e_g occupancy of about 1", "Zero e_g electrons", "A fully filled e_g", "It has no effect"], "answer": 0, "difficulty": "hard", "explain": "Shao-Horn and co-workers showed a volcano relationship: perovskite OER/ORR activity peaks when the B-site e_g occupancy is near unity, balancing how strongly oxygen intermediates bind." },
+
+  { "cat": "Green Hydrogen", "q": "What makes hydrogen 'green'?", "options": ["It is produced by water electrolysis powered by renewable electricity", "It is stored in green pressurised cylinders", "It comes from natural gas with carbon capture", "It is mixed with biogas"], "answer": 0, "difficulty": "easy", "explain": "Colour labels track the production route: green = renewable-powered electrolysis, grey = steam methane reforming, blue = fossil-based with carbon capture. Only green hydrogen is near-zero-carbon at source." },
+  { "cat": "Green Hydrogen", "q": "'Grey' hydrogen is produced by:", "options": ["Steam methane reforming without carbon capture", "Electrolysis with solar power", "Splitting water with nuclear heat", "Fermentation of biomass"], "answer": 0, "difficulty": "medium", "explain": "Over 90% of today's hydrogen is grey: CH₄ + H₂O → CO + 3H₂, emitting ~9–10 kg CO₂ per kg H₂. Replacing it with green hydrogen is one of the largest decarbonisation opportunities on Earth." },
+  { "cat": "Green Hydrogen", "q": "The minimum thermodynamic voltage to split water into H₂ and O₂ at 25 °C is:", "options": ["1.23 V", "0.59 V", "2.06 V", "3.00 V"], "answer": 0, "difficulty": "medium", "explain": "ΔG = 237 kJ/mol gives E = ΔG/nF = 1.23 V. Real electrolysers need more — the extra is overpotential, and reducing it is the central mission of electrocatalysis." },
+  { "cat": "Green Hydrogen", "q": "'Blue' hydrogen refers to hydrogen made from:", "options": ["Fossil fuels with carbon capture and storage", "Seawater only", "Blue-green algae", "Renewable electricity"], "answer": 0, "difficulty": "medium", "explain": "Blue hydrogen is grey hydrogen (steam reforming) plus carbon capture, cutting but not eliminating emissions. It is often framed as a transitional bridge toward fully green hydrogen." },
+  { "cat": "Green Hydrogen", "q": "Which water-electrolyser technology is the most mature and lowest-cost today?", "options": ["Alkaline electrolysis", "Solid oxide electrolysis (SOEC)", "Photo-electrochemical cells", "Plasma electrolysis"], "answer": 0, "difficulty": "medium", "explain": "Alkaline electrolysis is decades-proven, uses non-precious catalysts, and dominates industrial deployment — which is exactly why it anchors commercial green-hydrogen programmes today." },
+  { "cat": "Green Hydrogen", "q": "In electrolysis, Faraday's law relates the amount of hydrogen produced to the:", "options": ["Total electric charge passed", "Colour of the electrode", "Temperature of the room", "Volume of the cell"], "answer": 0, "difficulty": "medium", "explain": "Moles of product = charge / (n·F). This direct proportionality between coulombs and hydrogen is what lets engineers size and cost an electrolyser precisely." },
+  { "cat": "Green Hydrogen", "q": "A key attraction of hydrogen as a fuel is its:", "options": ["Very high energy per unit mass (gravimetric energy density)", "High energy per unit volume at ambient pressure", "Low flammability", "Natural abundance as free H₂ gas"], "answer": 0, "difficulty": "medium", "explain": "Hydrogen packs ~120 MJ/kg — about three times gasoline by mass. Its weakness is volumetric density: as a light gas it must be compressed or liquefied, which is a major engineering challenge." },
+  { "cat": "Green Hydrogen", "q": "Electrochemical H₂S valorisation is attractive because sulfide oxidation:", "options": ["Needs far less voltage than the oxygen evolution reaction", "Produces more CO₂", "Requires precious-metal cathodes only", "Cannot generate hydrogen"], "answer": 0, "difficulty": "hard", "explain": "Replacing the sluggish, high-overpotential OER with the easier oxidation of a waste sulfide stream lowers the cell voltage for hydrogen production — turning a refinery pollutant into a resource." },
+  { "cat": "Green Hydrogen", "q": "PEM electrolysers use a solid polymer electrolyte that conducts:", "options": ["Protons (H⁺)", "Electrons", "Hydroxide only", "Oxide ions"], "answer": 0, "difficulty": "medium", "explain": "Proton-exchange-membrane electrolysers conduct H⁺ across a solid polymer, enabling compact, high-pressure, fast-response operation — but they rely on costly iridium/platinum catalysts in acid." },
+
+  { "cat": "Batteries", "q": "Why do zinc–air batteries offer such high theoretical energy density?", "options": ["One reactant (oxygen) comes free from the surrounding air", "Zinc is the lightest metal", "They operate at very high voltage", "They contain no electrolyte"], "answer": 0, "difficulty": "hard", "explain": "The cathode's active material — oxygen — is breathed from air rather than stored in the cell. Removing that mass gives zinc–air a theoretical energy density (~1,086 Wh/kg) several times that of Li-ion." },
+  { "cat": "Batteries", "q": "During battery discharge, oxidation occurs at the:", "options": ["Anode", "Cathode", "Separator", "Electrolyte"], "answer": 0, "difficulty": "easy", "explain": "By definition the anode is where oxidation (electron release) happens. During discharge it is the negative electrode; the electrons then flow through the external circuit to the cathode." },
+  { "cat": "Batteries", "q": "The biggest obstacle to making zinc–air batteries rechargeable is:", "options": ["Poor bifunctional oxygen catalysis and zinc dendrites", "Lack of available oxygen", "Excessive cell voltage", "Zinc being radioactive"], "answer": 0, "difficulty": "hard", "explain": "Recharging demands efficient OER (not just ORR) and a zinc anode that re-plates evenly. Sluggish bifunctional catalysis and dendrite growth are why stable, long-cycle zinc–air remains a research frontier." },
+  { "cat": "Batteries", "q": "Supercapacitors deliver high power because they store charge mainly by:", "options": ["Fast, surface-based electrostatic or pseudocapacitive processes", "Slow bulk phase changes", "Nuclear reactions", "Melting the electrode"], "answer": 0, "difficulty": "medium", "explain": "Unlike batteries, which rely on slower bulk redox, supercapacitors store charge at or near the surface — enabling very fast charge/discharge (high power) but lower energy density." },
+  { "cat": "Batteries", "q": "'Pseudocapacitance' arises from:", "options": ["Fast, reversible faradaic redox reactions near the surface", "Pure double-layer charging only", "Gravitational energy storage", "Dielectric breakdown"], "answer": 0, "difficulty": "hard", "explain": "Pseudocapacitance blends battery-like redox with capacitor-like speed: fast surface faradaic reactions (as in hydrated tungsten oxides) boost charge storage while keeping rapid kinetics." },
+  { "cat": "Batteries", "q": "Coulombic efficiency of a battery is the ratio of charge:", "options": ["Extracted on discharge to charge inserted on charging", "Of the anode to the cathode", "Lost as heat to total charge", "Stored to the cell's mass"], "answer": 0, "difficulty": "medium", "explain": "Coulombic efficiency = discharge capacity / charge capacity. Values near 100% signal minimal side reactions — essential for long cycle life in any rechargeable chemistry." },
+  { "cat": "Batteries", "q": "A major advantage of aqueous (water-based) batteries over organic Li-ion is:", "options": ["Improved safety — non-flammable electrolyte", "Higher operating voltage", "Larger energy density", "No need for electrodes"], "answer": 0, "difficulty": "medium", "explain": "Water-based electrolytes are non-flammable and cheap, making aqueous zinc-ion and hybrid supercapacitors attractive for grid storage — at the cost of a narrower voltage window than organic Li-ion." },
+  { "cat": "Batteries", "q": "In a lithium-ion battery, lithium ions move from anode to cathode during:", "options": ["Discharge", "Charge", "Storage only", "Never — they stay fixed"], "answer": 0, "difficulty": "medium", "explain": "On discharge, Li⁺ de-intercalates from the graphite anode, travels through the electrolyte, and inserts into the cathode; charging reverses the flow. This 'rocking-chair' motion is the heart of Li-ion." },
+  { "cat": "Batteries", "q": "Solid-state electrolytes are pursued mainly because they promise:", "options": ["Greater safety and compatibility with lithium-metal anodes", "Lower cost than any liquid", "Zero internal resistance", "Infinite energy density"], "answer": 0, "difficulty": "medium", "explain": "Replacing flammable liquids with a solid ion conductor can suppress dendrites and enable high-capacity lithium-metal anodes — the key hoped-for leap in safety and energy density." },
+
+  { "cat": "Characterization", "q": "X-ray diffraction (XRD) identifies crystal structures using which law?", "options": ["Bragg's law: nλ = 2d·sinθ", "Beer–Lambert law", "Fick's law", "Ohm's law"], "answer": 0, "difficulty": "easy", "explain": "X-rays reflecting off parallel atomic planes interfere constructively when nλ = 2d·sinθ. The resulting peak pattern is a fingerprint of the lattice — the first check after any synthesis." },
+  { "cat": "Characterization", "q": "The key difference between SEM and TEM microscopy is:", "options": ["TEM transmits electrons through an ultra-thin sample for far higher resolution", "SEM uses light instead of electrons", "TEM only works on liquids", "SEM requires no vacuum"], "answer": 0, "difficulty": "easy", "explain": "SEM scans a surface with a focused beam (topography, ~nm); TEM shoots electrons through a sample thinned to <100 nm, resolving atomic columns. Choosing between them is choosing between skin and skeleton." },
+  { "cat": "Characterization", "q": "X-ray photoelectron spectroscopy (XPS) primarily reveals:", "options": ["Surface elemental composition and oxidation states", "Bulk magnetic ordering", "Melting point", "Refractive index"], "answer": 0, "difficulty": "medium", "explain": "XPS measures the binding energy of ejected core electrons, giving elemental identity and chemical (oxidation) state within a few nanometres of the surface — vital for probing catalyst surfaces." },
+  { "cat": "Characterization", "q": "Rietveld refinement is a method used to:", "options": ["Extract detailed crystal-structure parameters from a powder XRD pattern", "Measure electrical conductivity", "Image single atoms", "Determine surface area"], "answer": 0, "difficulty": "hard", "explain": "Rietveld refinement least-squares-fits a calculated diffraction pattern to the whole measured profile, yielding lattice parameters, site occupancies, and phase fractions — quantitative crystallography." },
+  { "cat": "Characterization", "q": "Energy-dispersive X-ray spectroscopy (EDS/EDX), often paired with SEM/TEM, tells you the sample's:", "options": ["Elemental composition", "Crystal colour", "Magnetic moment", "Boiling point"], "answer": 0, "difficulty": "medium", "explain": "Electron-beam excitation produces characteristic X-rays whose energies identify the elements present and their approximate amounts — elemental mapping alongside the microscope image." },
+  { "cat": "Characterization", "q": "The BET method is used to measure a material's:", "options": ["Specific surface area", "Band gap", "Hardness", "Density"], "answer": 0, "difficulty": "hard", "explain": "Brunauer–Emmett–Teller analysis of gas adsorption isotherms gives surface area per gram — critical for catalysts and battery electrodes, where more accessible surface usually means more activity." },
+  { "cat": "Characterization", "q": "Selected-area electron diffraction (SAED) in a TEM primarily reveals a sample's:", "options": ["Crystallinity and lattice orientation", "Elemental composition", "Surface roughness", "Electrical resistance"], "answer": 0, "difficulty": "medium", "explain": "SAED produces a diffraction pattern from a chosen region: sharp spots indicate a single crystal, rings indicate polycrystalline material, and a diffuse halo indicates amorphous material." },
+  { "cat": "Characterization", "q": "Atomic force microscopy (AFM) images a surface by:", "options": ["Scanning a sharp tip and sensing its interaction with the surface", "Passing X-rays through the sample", "Measuring emitted light", "Weighing the sample"], "answer": 0, "difficulty": "medium", "explain": "AFM drags (or taps) a nanoscale tip across a surface, tracking deflection to map topography at sub-nanometre height resolution — no vacuum or conductive coating required." },
+  { "cat": "Characterization", "q": "Raman spectroscopy provides information about a material's:", "options": ["Vibrational (phonon) modes and bonding", "Nuclear spin only", "Electrical resistivity", "Magnetic hysteresis"], "answer": 0, "difficulty": "medium", "explain": "Inelastic scattering of laser light shifts by the energy of molecular/lattice vibrations. The Raman 'fingerprint' identifies phases, strain, and defects — complementary to XRD." },
+
+  { "cat": "Fundamentals", "q": "DFT, the workhorse of computational materials science, stands for:", "options": ["Density Functional Theory", "Direct Fourier Transform", "Dynamic Field Testing", "Differential Flow Thermodynamics"], "answer": 0, "difficulty": "easy", "explain": "DFT computes a material's electronic structure from its electron density rather than the full many-body wavefunction — making quantum mechanics tractable enough to screen thousands of candidates before entering a lab." },
+  { "cat": "Fundamentals", "q": "A material's band gap determines whether it behaves as a:", "options": ["Conductor, semiconductor, or insulator", "Magnet or non-magnet", "Solid or liquid", "Acid or base"], "answer": 0, "difficulty": "easy", "explain": "The band gap is the energy between the filled valence band and empty conduction band: zero → metal, small → semiconductor, large → insulator. It governs electronic and optical behaviour." },
+  { "cat": "Fundamentals", "q": "Nanomaterials are often more chemically active than bulk because they have a high:", "options": ["Surface-area-to-volume ratio", "Melting point", "Density", "Atomic mass"], "answer": 0, "difficulty": "easy", "explain": "Shrinking to the nanoscale exposes a huge fraction of atoms at the surface, where reactions happen. This is why controlling morphology and facets is central to catalyst design." },
+  { "cat": "Fundamentals", "q": "A catalyst speeds up a reaction by:", "options": ["Lowering the activation energy without being consumed", "Raising the temperature permanently", "Adding energy to the products", "Being used up stoichiometrically"], "answer": 0, "difficulty": "easy", "explain": "Catalysts open a lower-energy pathway, increasing rate while emerging unchanged. The entire field of electrocatalysis is the search for cheaper, more durable ways to lower that barrier." },
+  { "cat": "Fundamentals", "q": "For semiconductor photocatalysis, the incident light must have energy:", "options": ["Greater than or equal to the band gap", "Exactly zero", "Less than the band gap", "In the radio-wave range only"], "answer": 0, "difficulty": "medium", "explain": "Only photons with energy ≥ the band gap can promote an electron across it, creating the electron–hole pairs that drive photocatalytic reactions. Tuning the gap tunes which light a material can harvest." },
+  { "cat": "Fundamentals", "q": "The difference between a crystalline and an amorphous solid is:", "options": ["Long-range ordered atomic arrangement vs. disorder", "Colour", "Electrical charge", "Mass"], "answer": 0, "difficulty": "easy", "explain": "Crystalline solids have a repeating, long-range periodic lattice (sharp XRD peaks); amorphous solids (like glass) lack it, showing only a broad diffraction halo." },
+  { "cat": "Fundamentals", "q": "In materials science, a 'point defect' such as a vacancy is:", "options": ["A localized deviation from the perfect crystal lattice", "A crack visible to the eye", "A type of chemical bond", "A unit of energy"], "answer": 0, "difficulty": "medium", "explain": "Point defects — vacancies, interstitials, substitutions — are atomic-scale imperfections. Far from being flaws, engineered defects tune conductivity, colour, and catalytic activity by design." },
+  { "cat": "Fundamentals", "q": "Doping a semiconductor means:", "options": ["Adding controlled impurities to tune its electronic properties", "Heating it until it melts", "Removing all its electrons", "Coating it in gold"], "answer": 0, "difficulty": "medium", "explain": "Introducing small amounts of a foreign element adds charge carriers (n- or p-type) or shifts energy levels, precisely controlling conductivity — the foundation of all modern electronics." },
+  { "cat": "Fundamentals", "q": "Approximately how many entities are in one mole (Avogadro's number)?", "options": ["6.022 × 10²³", "3.14 × 10⁶", "1.6 × 10⁻¹⁹", "9.81 × 10⁰"], "answer": 0, "difficulty": "easy", "explain": "One mole contains 6.022 × 10²³ particles — the bridge between the atomic scale and gram-scale quantities a chemist actually weighs out on the bench." }
 ]
